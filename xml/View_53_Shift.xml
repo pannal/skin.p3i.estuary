@@ -228,25 +228,22 @@
 				<visible>ListItem.HasVideoVersions + ListItem.HasVideoExtras</visible>
 			</control>
 			<control type="label">
-				<left>110</left>
+				<left>139</left>
 				<top>522</top>
 				<width>185</width>
 				<height>24</height>
-				<label>$VAR[WatchedStatusVar]</label>
-				<font>font20_title</font>
+				<label>$VAR[WatchedStatusCoverVar]</label>
+				<font>font_flag</font>
 				<shadowcolor>text_shadow</shadowcolor>
 				<align>right</align>
-				<aligny>center</aligny>
 				<visible>String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,set) | String.IsEqual(ListItem.DBType,season)</visible>
 			</control>
 			<control type="image">
-				<left>302</left>
+				<left>303</left>
 				<top>522</top>
 				<width>24</width>
 				<height>24</height>
-				<texture>$VAR[ItemStatusIconVar]</texture>
-				<align>right</align>
-				<aligny>center</aligny>
+				<texture>$VAR[ItemStatusIconPosterVar]</texture>
 			</control>
 		</control>
 	</include>

@@ -3,6 +3,12 @@
 	<fontset id="Default" idloc="15109">
 		<!-- Normal Fonts -->
 		<font>
+			<name>font8</name>
+			<filename>NotoSans-Regular.ttf</filename>
+			<size>20</size>
+			<style>lighten</style>
+		</font>
+		<font>
 			<name>font10</name>
 			<filename>NotoSans-Regular.ttf</filename>
 			<size>23</size>
@@ -81,6 +87,11 @@
 			<name>font_clock</name>
 			<filename>Roboto-Thin.ttf</filename>
 			<size>70</size>
+		</font>
+		<font>
+			<name>font_clock55</name>
+			<filename>Roboto-Thin.ttf</filename>
+			<size>55</size>
 		</font>
 		<!-- Title Fonts -->
 		<font>
@@ -226,6 +237,12 @@
 			<name>font_clock</name>
 			<filename>arial.ttf</filename>
 			<size>70</size>
+			<style>lighten</style>
+		</font>
+		<font>
+			<name>font_clock55</name>
+			<filename>arial.ttf</filename>
+			<size>55</size>
 			<style>lighten</style>
 		</font>
 		<!-- Title Fonts -->

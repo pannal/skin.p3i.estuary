@@ -563,7 +563,7 @@ msgstr ""
 
 #: /xml/Home.xml
 msgctxt "#31122"
-msgid "Unwatched TV Shows"
+msgid "Unwatched TV shows"
 msgstr ""
 
 #: /xml/DialogVideoInfo.xml
@@ -573,7 +573,7 @@ msgstr ""
 
 #: /xml/Variables.xml
 msgctxt "#31124"
-msgid "Playerprocessinfo"
+msgid "Player Process"
 msgstr ""
 
 #: /xml/DialogVideoInfo.xml
@@ -923,68 +923,14 @@ msgstr ""
 #. Label to show the system info page
 msgctxt "#31611"
 msgid "System"
-
-#: /xml/DialogPlayerProcessInfo.xml
-msgctxt "#31630"
-msgid "System FPS"
 msgstr ""
 
-#: /xml/DialogPlayerProcessInfo.xml
-msgctxt "#31631"
-msgid "CPU frequency"
+#: /xml/SkinSettings.xml
+msgctxt "#31662"
+msgid "Show memory usage in top bar"
 msgstr ""
 
-#: /xml/DialogPlayerProcessInfo.xml
-msgctxt "#31632"
-msgid "SoC temp"
-msgstr ""
-
-#: /xml/DialogPlayerProcessInfo.xml
-msgctxt "#31633"
-msgid "Video stream cache"
-msgstr ""
-
-#: /xml/DialogPlayerProcessInfo.xml
-msgctxt "#31634"
-msgid "Player process info"
-msgstr ""
-
-#: /xml/DialogPlayerProcessInfo.xml
-msgctxt "#31635"
-msgid "Video source type"
-msgstr ""
-
-#: /xml/DialogPlayerProcessInfo.xml
-msgctxt "#32100"
-msgid "Display mode"
-msgstr ""
-
-#: /xml/DialogPlayerProcessInfo.xml
-msgctxt "#32101"
-msgid "EOTF & Gamut"
-msgstr ""
-
-#: /xml/DialogPlayerProcessInfo.xml
-#. Label to show the video pixel format
-msgctxt "#31638"
-msgid "Pixel format"
-msgstr ""
-
-
-#: /xml/DialogPlayerProcessInfo.xml
-#. Label to show the video resolution
-msgctxt "#31639"
-msgid "Video resolution"
-msgstr ""
-
-#: /xml/DialogPlayerProcessInfo.xml
-#. Label to show the Audio Object Base
-msgctxt "#31640"
-msgid "Audio object base"
-msgstr ""
-
-#: /xml/DialogPlayerProcessInfo.xml
-#. Label to show passtrough
-msgctxt "#31641"
-msgid "Passthrough"
+#: /xml/SkinSettings.xml
+msgctxt "#31663"
+msgid "Show cpu temp and memory usage in top bar"
 msgstr ""

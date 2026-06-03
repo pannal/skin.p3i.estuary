@@ -39,13 +39,13 @@
 					<top>90</top>
 					<width>100%</width>
 					<height>135</height>
-					<itemgap>10</itemgap>
+					<itemgap>6</itemgap>
 					<scrolltime tween="sine">200</scrolltime>
 					<orientation>horizontal</orientation>
 					<onup>87</onup>
 					<ondown>noop</ondown>
 					<onleft>70048</onleft>
-					<onright>804</onright>
+					<onright>70013</onright>
 					<control type="radiobutton" id="600">
 						<include content="OSDButton">
 							<param name="texture" value="osd/fullscreen/buttons/previous.png"/>
@@ -137,7 +137,7 @@
 					<width>1800</width>
 					<height>135</height>
 					<align>right</align>
-					<itemgap>10</itemgap>
+					<itemgap>6</itemgap>
 					<scrolltime tween="sine">200</scrolltime>
 					<orientation>horizontal</orientation>
 					<onup>87</onup>
@@ -153,13 +153,26 @@
 						<onclick>PlayerControl(ShowVideoMenu)</onclick>
 						<visible>VideoPlayer.HasMenu</visible>
 					</control>
+					<control type="radiobutton" id="70013">
+						<include content="OSDButton">
+							<param name="texture" value="osd/fullscreen/buttons/vs10.png"/>
+						</include>
+						<onclick>Action(Close)</onclick>
+						<onclick>ActivateWindow(1111)</onclick>
+					</control>
 					<control type="radiobutton" id="70011">
-					<include content="OSDButton">
-					       <param name="texture" value="osd/fullscreen/buttons/processinfo.png"/>
-					</include>
-					       <onclick>Action(Close)</onclick>
-					       <onclick>ActivateWindow(playerprocessinfo)</onclick>
-				        </control>
+						<include content="OSDButton">
+							<param name="texture" value="osd/fullscreen/buttons/processinfo.png"/>
+						</include>
+						<onclick>Action(Close)</onclick>
+						<onclick>ActivateWindow(playerprocessinfo)</onclick>
+					</control>
+					<control type="radiobutton" id="70012">
+						<include content="OSDButton">
+							<param name="texture" value="osd/fullscreen/buttons/playerdebug.png"/>
+						</include>
+						<onclick>playerdebug</onclick>
+					</control>
 					<control type="radiobutton" id="70040">
 						<include content="OSDButton">
 							<param name="texture" value="osd/fullscreen/buttons/channels.png"/>

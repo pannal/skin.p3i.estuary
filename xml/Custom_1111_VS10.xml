@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1111">
+    <defaultcontrol>9000</defaultcontrol>
+	<include>Animation_DialogPopupOpenClose</include>
+	<controls>
+		<control type="group">
+			<centerleft>50%</centerleft>
+			<width>600</width>
+			<centertop>50%</centertop>
+			<height>350</height>
+			<include content="DialogBackgroundCommons">
+				<param name="width" value="600" />
+				<param name="height" value="80" />
+				<param name="header_label" value="VS10 Mode" />
+				<param name="header_id" value="2" />
+			</include>
+			<control type="panel" id="9000">
+				<include>ButtonMenuList</include>
+				<content>
+					<item>
+                        <label>$VAR[VS10ModeOriginalVar]</label>
+                        <onclick>Action(vs10.original)</onclick>
+                        <onclick>Dialog.Close(1111)</onclick>
+					</item>
+					<item>
+                        <label>$VAR[VS10ModeSDRVar]</label>
+                        <onclick>Action(vs10.sdr)</onclick>
+                        <onclick>Dialog.Close(1111)</onclick>
+					</item>
+					<item>
+                        <label>$VAR[VS10ModeHDRVar]</label>
+                        <onclick>Action(vs10.hdr10)</onclick>
+                        <onclick>Dialog.Close(1111)</onclick>
+					</item>
+					<item>
+                        <label>$VAR[VS10ModeDVVar]</label>
+                        <onclick>Action(vs10.dv)</onclick>
+                        <onclick>Dialog.Close(1111)</onclick>
+						<visible>!String.IsEqual(Player.Process(video.hdr.type),Dolby Vision)</visible>
+					</item>
+				</content>
+			</control>
+		</control>
+	</controls>
+</window>

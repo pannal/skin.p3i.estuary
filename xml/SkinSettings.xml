@@ -55,6 +55,20 @@
 					<onclick condition="String.IsEmpty(Weather.Plugin)">ActivateWindow(servicesettings,weather)</onclick>
 					<selected>Skin.HasSetting(show_weatherinfo) + !String.IsEmpty(Weather.Plugin)</selected>
 				</control>
+				<control type="radiobutton" id="7041">
+					<label>$LOCALIZE[31662]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(show_ram)</onclick>
+					<selected>Skin.HasSetting(show_ram)</selected>
+					<enable>!Skin.HasSetting(show_cpu)</enable>
+				</control>
+				<control type="radiobutton" id="7042">
+					<label>$LOCALIZE[31663]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(show_cpu)</onclick>
+					<selected>Skin.HasSetting(show_cpu)</selected>
+                    <enable>!Skin.HasSetting(show_ram)</enable>
+				</control>
 				<control type="radiobutton" id="705">
 					<label>$LOCALIZE[31160]</label>
 					<include>DefaultSettingButton</include>
@@ -72,6 +86,13 @@
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.SelectBool(31164, 31165|show_profilename, 31166|show_profileavatar, 16018|show_none)</onclick>
 					<label2>$VAR[ProfileIdentificationLabel2Var]</label2>
+				</control>
+				<control type="radiobutton" id="7015">
+					<label>SkinDebug</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(Skin.ToggleDebug)</selected>
+					<onclick>Skin.ToggleSetting(Skin.ToggleDebug)</onclick>
+					<onclick>Skin.ToggleDebug</onclick>
 				</control>
 			</control>
 			<control type="grouplist" id="600">

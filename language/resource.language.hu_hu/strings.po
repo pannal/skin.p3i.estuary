@@ -752,30 +752,6 @@ msgstr "Rendszer"
 #~ msgid "Extras"
 #~ msgstr "Extrák"
 
-msgctxt "#31630"
-msgid "System FPS"
-msgstr "Rendszer FPS"
-
-msgctxt "#31631"
-msgid "CPU frequency"
-msgstr "CPU frekvencia"
-
-msgctxt "#31632"
-msgid "SoC temp"
-msgstr "SoC hőmérséklet"
-
-msgctxt "#31633"
-msgid "Video stream cache"
-msgstr "Videófolyam puffer"
-
-msgctxt "#31634"
-msgid "Player process info"
-msgstr "Feldolgozási információ"
-
-msgctxt "#31635"
-msgid "Video source type"
-msgstr "Videó forrás típus"
-
 #~ msgctxt "#31059"
 #~ msgid "Select + X"
 #~ msgstr "Kiválasztás + X"
@@ -792,10 +768,12 @@ msgstr "Videó forrás típus"
 #~ msgid "Player process info"
 #~ msgstr "Feldolgozási információ"
 
-msgctxt "#32100"
-msgid "Display mode"
-msgstr "Kijelző mód"
+#: /xml/SkinSettings.xml
+msgctxt "#31662"
+msgid "Show memory usage in top bar"
+msgstr "Ram használat megjelenítése az óra alatt"
 
-msgctxt "#32101"
-msgid "EOTF & Gamut"
-msgstr "EOTF & Gamut"
+#: /xml/SkinSettings.xml
+msgctxt "#31663"
+msgid "Show cpu temp and memory usage in top bar"
+msgstr "Cpu hőmérséklet + Ram használat megjelenítése az óra alatt"

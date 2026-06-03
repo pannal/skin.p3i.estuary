@@ -945,7 +945,7 @@
 							<visible>!Skin.HasSetting(HomeMenuNoMovieButton)</visible>
 						</item>
 						<item>
-							<label>$LOCALIZE[20343]</label>
+							<label>[CAPITALIZE]$LOCALIZE[20343][/CAPITALIZE]</label>
 							<onclick condition="Library.HasContent(tvshows) + Skin.HasSetting(home_no_categories_widget) + !System.GetBool(myvideos.flatten)">ActivateWindow(Videos,videodb://tvshows/,return)</onclick>
 							<onclick condition="Library.HasContent(tvshows) + Skin.HasSetting(home_no_categories_widget) + System.GetBool(myvideos.flatten)">ActivateWindow(Videos,videodb://tvshows/titles/,return)</onclick>
 							<onclick condition="Library.HasContent(tvshows) + !Skin.HasSetting(home_no_categories_widget)">ActivateWindow(Videos,videodb://tvshows/titles/,return)</onclick>
@@ -1098,10 +1098,7 @@
 				<height>70</height>
 				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-				<include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlags">
-					<param name="infolabel_prefix" value="Container." />
-					<param name="resolution_var" value="$VAR[ContainerResolutionFlagVar]" />
-				</include>
+				<include condition="!Skin.HasSetting(hide_mediaflags)">MediaFlags</include>
 				<control type="rss">
 					<animation effect="slide" end="0,90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
 					<left>0</left>
@@ -1128,10 +1125,8 @@
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				<top>22</top>
-				<left>95</left>
+				<left>128</left>
 				<control type="image">
-					<left>4</left>
-					<top>0</top>
 					<aspectratio>keep</aspectratio>
 					<width>192</width>
 					<height>56</height>

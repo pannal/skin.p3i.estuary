@@ -79,7 +79,10 @@
 				</control>
 			</control>
 			<include content="TopBar">
-				<param name="breadcrumbs_label" value="$VAR[BreadcrumbsVideoVar]" />
+				<param name="breadcrumbs_label">$VAR[BreadcrumbsVideoVar,[COLOR grey],[/COLOR]]</param>
+				<param name="show_title">$INFO[Container.ShowTitle,[COLOR grey] / ,[/COLOR]]</param>
+				<param name="folder_name">$INFO[Container.FolderName,[COLOR grey] / ,[/COLOR]]</param>
+				<param name="sublabel">$INFO[Container.CurrentItem,[COLOR grey], / [/COLOR]]$INFO[Container.NumItems,[COLOR grey],[/COLOR]]</param>
 			</include>
 			<include content="BottomBar">
 				<param name="info_visible" value="true" />

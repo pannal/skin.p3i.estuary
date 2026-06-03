@@ -300,58 +300,6 @@
 					<bordersize>20</bordersize>
 				</control>
 			</control>
-			<control type="group">
-				<visible>String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBType,season) | ListItem.IsRecording | ListItem.HasReminder | ListItem.HasTimer | ListItem.IsCollection | ListItem.HasVideoVersions | ListItem.IsPlaying | ListItem.IsResumable | ListItem.HasVideoExtras | ListItem.HasArchive | Integer.IsGreater(ListItem.Playcount,0)</visible>
-				<control type="image">
-					<left>35</left>
-					<top>335</top>
-					<width>250</width>
-					<height>50</height>
-					<texture colordiffuse="CCFFFFFF">overlays/overlayfade.png</texture>
-					<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
-				</control>
-				<control type="image">
-					<left>40</left>
-					<top>358</top>
-					<width>24</width>
-					<height>24</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<texture>$VAR[ItemTypeIconVar]</texture>
-				</control>
-				<control type="image">
-					<left>70</left>
-					<top>358</top>
-					<width>24</width>
-					<height>24</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<texture>overlays/extras.png</texture>
-					<visible>ListItem.HasVideoVersions + ListItem.HasVideoExtras</visible>
-				</control>
-				<control type="label">
-					<left>105</left>
-					<top>355</top>
-					<width>145</width>
-					<label>$VAR[WatchedStatusVar]</label>
-					<font>font20_title</font>
-					<shadowcolor>text_shadow</shadowcolor>
-					<align>right</align>
-					<visible>String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,set) | String.IsEqual(ListItem.DBType,season)</visible>
-				</control>
-				<control type="image">
-					<left>254</left>
-					<top>358</top>
-					<width>24</width>
-					<height>24</height>
-					<texture>$VAR[ItemStatusIconVar]</texture>
-				</control>
-			</control>
-			<control type="group">
-				<left>135</left>
-				<top>-8</top>
-				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
-			</control>
 			<control type="progress">
 				<left>35</left>
 				<top>365</top>
@@ -361,6 +309,46 @@
 				<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>ListItem.PercentPlayed</info>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
+			</control>
+			<control type="group">
+				<visible>String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBType,season) | ListItem.IsRecording | ListItem.HasReminder | ListItem.HasTimer | ListItem.IsCollection | ListItem.HasVideoVersions | ListItem.IsPlaying | ListItem.IsResumable | ListItem.HasVideoExtras | ListItem.HasArchive | Integer.IsGreater(ListItem.Playcount,0)</visible>
+				<control type="image">
+					<left>35</left>
+					<top>389</top>
+					<width>19</width>
+					<height>19</height>
+					<texture colordiffuse="grey">$VAR[ItemTypeIconVar]</texture>
+				</control>
+				<control type="image">
+					<left>62</left>
+					<top>389</top>
+					<width>19</width>
+					<height>19</height>
+					<texture colordiffuse="grey">overlays/extras.png</texture>
+					<visible>ListItem.HasVideoVersions + ListItem.HasVideoExtras</visible>
+				</control>
+				<control type="label">
+					<left>138</left>
+					<top>385</top>
+					<width>145</width>
+					<label>$VAR[WatchedStatusCoverVar,[COLOR grey],[/COLOR]]</label>
+					<font>font_flag</font>
+					<shadowcolor>text_shadow</shadowcolor>
+					<align>right</align>
+					<visible>String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,set) | String.IsEqual(ListItem.DBType,season)</visible>
+				</control>
+				<control type="image">
+					<left>262</left>
+					<top>385</top>
+					<width>24</width>
+					<height>24</height>
+					<texture colordiffuse="grey">$VAR[ItemStatusIconPosterVar]</texture>
+				</control>
+			</control>
+			<control type="group">
+				<left>135</left>
+				<top>-8</top>
+				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
 			</control>
 		</definition>
 	</include>

@@ -15,10 +15,10 @@
 				<left>66</left>
 				<include>OpenClose_Left</include>
 				<control type="image">
-					<top>-16</top>
+					<top>-12</top>
 					<left>-16</left>
-					<width>566</width>
-					<height>841</height>
+					<width>573</width>
+					<height>838</height>
 					<texture>colors/black.png</texture>
 					<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
@@ -26,9 +26,9 @@
 				<control type="image">
 					<depth>DepthContentPopout</depth>
 					<left>4</left>
-					<top>4</top>
-					<width>526</width>
-					<height>801</height>
+					<top>8</top>
+					<width>533</width>
+					<height>798</height>
 					<aspectratio>scale</aspectratio>
 					<texture fallback="DefaultVideo.png" background="true">$VAR[InfoDialogPosterVar]</texture>
 				</control>
@@ -37,17 +37,17 @@
 					<visible>!String.IsEmpty(ListItem.Art(thumb)) + !String.IsEqual(ListItem.Art(thumb),ListItem.Art(poster))</visible>
 					<control type="image">
 						<left>4</left>
-						<top>4</top>
-						<width>526</width>
-						<height>801</height>
+						<top>8</top>
+						<width>533</width>
+						<height>798</height>
 						<aspectratio>stretch</aspectratio>
 						<texture colordiffuse="AAFFFFFF" fallback="DefaultVideo.png">colors/black.png</texture>
 					</control>
 					<control type="image">
 						<left>14</left>
-						<top>4</top>
-						<width>506</width>
-						<height>801</height>
+						<top>8</top>
+						<width>513</width>
+						<height>798</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$VAR[ShiftThumbVar]</texture>
 						<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
@@ -672,10 +672,10 @@
 				</include>
 			</control>
 			<control type="label">
-				<right>80</right>
+				<right>75</right>
 				<top>970</top>
 				<align>right</align>
-				<width>1400</width>
+				<width>1770</width>
 				<height>44</height>
 				<font>font20_title</font>
 				<textcolor>99FFFFFF</textcolor>
