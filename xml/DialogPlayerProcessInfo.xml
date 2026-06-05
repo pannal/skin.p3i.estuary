@@ -1502,7 +1502,7 @@
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
-						<label>$INFO[VideoPlayer.SubtitlesLanguage] $VAR[|] $VAR[SubtitleVar]</label>
+						<label>$INFO[VideoPlayer.SubtitlesLanguage,, [COLOR ff404040]|[/COLOR] ]$VAR[SubtitleVar]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
 						<visible>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</visible>
@@ -1513,7 +1513,7 @@
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
-						<label>$INFO[VideoPlayer.SubtitlesLanguage,[COLOR dimgrey],[/COLOR]] $VAR[|] $INFO[VideoPlayer.SubtitlesLangEx,[COLOR dimgrey],[/COLOR]]</label>
+						<label>$INFO[VideoPlayer.SubtitlesLanguage,[COLOR dimgrey],[/COLOR] [COLOR ff404040]|[/COLOR] ]$VAR[SubtitleVar,[COLOR dimgrey],[/COLOR]]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
 						<visible>VideoPlayer.HasSubtitles + !VideoPlayer.SubtitlesEnabled</visible>
