@@ -1,3 +1,6 @@
+[B]8.8.9[/B]
+• Codec logos: layout (vertical/horizontal) and position (left/center/right) settings, vertical+left by default, with an off-device preview toggle
+
 [B]0.8.5[/B]
 • Updated language files from Transifex
 
