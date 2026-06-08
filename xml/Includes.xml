@@ -1684,7 +1684,7 @@
 					<width>144</width>
 					<height>80</height>
 					<visible>$PARAM[visible]</visible>
-					<texture>$VAR[CodecLogoColorVar]$PARAM[texture]</texture>
+					<texture>codecs/$VAR[CodecLogoColorVar]$PARAM[texture]</texture>
 				</control>
 			</control>
 		</definition>
@@ -1703,7 +1703,7 @@
 					<height>80</height>
 					<animation effect="slide" end="164,-90" time="0" condition="Skin.HasSetting(osd.codeclogoshorizontal)">Conditional</animation>
 					<visible>$PARAM[visible]</visible>
-					<texture>$VAR[CodecLogoColorVar]$PARAM[texture]</texture>
+					<texture>codecs/$VAR[CodecLogoColorVar]$PARAM[texture]</texture>
 				</control>
 			</control>
 		</definition>
