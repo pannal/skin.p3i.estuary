@@ -798,3 +798,8 @@ msgstr "Codec-Logos erzwingen (Vorschau)"
 msgctxt "#31670"
 msgid "Stack codec logos vertically"
 msgstr "Codec-Logos vertikal stapeln"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31671"
+msgid "Always keep codec logos inside the active area"
+msgstr "Codec-Logos immer im aktiven Bildbereich halten"

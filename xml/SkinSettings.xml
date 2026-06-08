@@ -101,6 +101,13 @@
 					<onclick>Skin.ToggleSetting(osd.codeclogospreview)</onclick>
 					<selected>Skin.HasSetting(osd.codeclogospreview)</selected>
 				</control>
+				<control type="radiobutton" id="632">
+					<label>$LOCALIZE[31671]</label>
+					<include content="DefaultSettingButton"><param name="textoffsetx">70</param></include>
+					<onclick>Skin.ToggleSetting(osd.codeclogosactiveareaoff)</onclick>
+					<selected>!Skin.HasSetting(osd.codeclogosactiveareaoff)</selected>
+					<enable>!Skin.HasSetting(osd.hidecodecstartuplogos)</enable>
+				</control>
 				<control type="button" id="706">
 					<label>$LOCALIZE[31024]</label>
 					<include>DefaultSettingButton</include>
