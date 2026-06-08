@@ -91,8 +91,8 @@
 				<control type="radiobutton" id="633">
 					<label>$LOCALIZE[31672]</label>
 					<include content="DefaultSettingButton"><param name="textoffsetx">70</param></include>
-					<onclick>Skin.ToggleSetting(osd.codeclogocolor)</onclick>
-					<selected>!Skin.HasSetting(osd.codeclogocolor)</selected>
+					<onclick>Skin.ToggleSetting(osd.codeclogolight)</onclick>
+					<selected>!Skin.HasSetting(osd.codeclogolight)</selected>
 					<enable>!Skin.HasSetting(osd.hidecodecstartuplogos)</enable>
 				</control>
 				<control type="radiobutton" id="631">
