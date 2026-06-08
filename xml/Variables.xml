@@ -1076,4 +1076,7 @@
 		<value condition="Skin.HasSetting(osd.userightCodecLogos)">$LOCALIZE[31667]</value>
 		<value>$LOCALIZE[31665]</value>
 	</variable>
+	<variable name="CodecLogoColorVar">
+		<value condition="Skin.HasSetting(osd.codeclogocolor)">b_</value>
+	</variable>
 </includes>
