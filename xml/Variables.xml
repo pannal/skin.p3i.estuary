@@ -1033,9 +1033,9 @@
 	</variable>
 	<variable name="CMMetadataVar">
 		<value condition="String.StartsWith(Player.Process(video.dovi.meta.version),V)">$INFO[Player.Process(video.dovi.meta.version)] [COLOR dimgrey]Append[/COLOR]</value>
-		<value condition="String.Contains(Player.Process(video.dovi.meta.version),C29 CMv2.9 1-L2)">VCMv2.9 1-L2 [COLOR dimgrey]Strip[/COLOR]</value>
-		<value condition="String.Contains(Player.Process(video.dovi.meta.version),C29 CMv2.9 2-L2)">VCMv2.9 2-L2 [COLOR dimgrey]Strip[/COLOR]</value>
-		<value condition="String.Contains(Player.Process(video.dovi.meta.version),C29 CMv2.9 3-L2)">VCMv2.9 3-L2 [COLOR dimgrey]Strip[/COLOR]</value>
+		<value condition="String.Contains(Player.Process(video.dovi.meta.version),C29 CMv2.9 1-L2)">VCMv2.9 1-L2 [COLOR dimgrey]Stripped[/COLOR]</value>
+		<value condition="String.Contains(Player.Process(video.dovi.meta.version),C29 CMv2.9 2-L2)">VCMv2.9 2-L2 [COLOR dimgrey]Stripped[/COLOR]</value>
+		<value condition="String.Contains(Player.Process(video.dovi.meta.version),C29 CMv2.9 3-L2)">VCMv2.9 3-L2 [COLOR dimgrey]Stripped[/COLOR]</value>
 		<value>$INFO[Player.Process(video.dovi.meta.version)]</value>
 	</variable>
 	<variable name="L5StateVar">
