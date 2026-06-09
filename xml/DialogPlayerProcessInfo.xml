@@ -369,7 +369,7 @@
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
-						<label>$INFO[Player.Process(video.dovi.meta.version)] $VAR[CMAppendVar]</label>
+						<label>$VAR[CMMetadataVar]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
 					</control>
