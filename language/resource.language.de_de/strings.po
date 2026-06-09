@@ -803,3 +803,8 @@ msgstr "Codec-Logos vertikal stapeln"
 msgctxt "#31671"
 msgid "Always keep codec logos inside the active area"
 msgstr "Codec-Logos immer im aktiven Bildbereich halten"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31672"
+msgid "Dark codec logos"
+msgstr "Dunkle Codec-Logos"
