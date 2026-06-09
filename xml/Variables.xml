@@ -1031,8 +1031,12 @@
 		<value condition="String.IsEqual(Player.Process(video.dovi.dual.track),ST-DL) + String.IsEqual(Player.Process(video.source.additional.hdr.type),Dolby Vision)">ST-DL</value>
 		<value condition="String.IsEqual(Player.Process(video.dovi.dual.track),DT-DL) + String.IsEqual(Player.Process(video.source.additional.hdr.type),Dolby Vision)">DT-DL</value>
 	</variable>
-	<variable name="CMAppendVar">
-		<value condition="String.StartsWith(Player.Process(video.dovi.meta.version),V)">[COLOR dimgrey]Append[/COLOR]</value>
+	<variable name="CMMetadataVar">
+		<value condition="String.StartsWith(Player.Process(video.dovi.meta.version),V)">$INFO[Player.Process(video.dovi.meta.version)] [COLOR dimgrey]Append[/COLOR]</value>
+		<value condition="String.Contains(Player.Process(video.dovi.meta.version),C29 CMv2.9 1-L2)">VCMv2.9 1-L2 [COLOR dimgrey]Strip[/COLOR]</value>
+		<value condition="String.Contains(Player.Process(video.dovi.meta.version),C29 CMv2.9 2-L2)">VCMv2.9 2-L2 [COLOR dimgrey]Strip[/COLOR]</value>
+		<value condition="String.Contains(Player.Process(video.dovi.meta.version),C29 CMv2.9 3-L2)">VCMv2.9 3-L2 [COLOR dimgrey]Strip[/COLOR]</value>
+		<value>$INFO[Player.Process(video.dovi.meta.version)]</value>
 	</variable>
 	<variable name="L5StateVar">
 		<value condition="Integer.IsEqual(Player.Process(video.dovi.l5.detect.state),0)">Failed</value>
