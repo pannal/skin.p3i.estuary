@@ -752,6 +752,7 @@
 		<value condition="String.IsEqual(ListItem.VideoCodec,wmv3)">WMV</value>
 		<value condition="String.IsEqual(ListItem.VideoCodec,wvc1)">VC-1</value>
 		<value condition="String.IsEqual(ListItem.VideoCodec,xvid)">XviD</value>
+		<value condition="String.IsEqual(ListItem.VideoCodec,prores)">ProRes</value>
 		<value>[UPPERCASE]$INFO[ListItem.VideoCodec][/UPPERCASE]</value>
 	</variable>
 	<variable name="VideoResolutionTypeVar">
@@ -883,6 +884,7 @@
 		<value condition="String.IsEqual(VideoPlayer.VideoCodec,wmv3)">WMV</value>
 		<value condition="String.IsEqual(VideoPlayer.VideoCodec,wvc1)">VC-1</value>
 		<value condition="String.IsEqual(VideoPlayer.VideoCodec,xvid)">XviD</value>
+		<value condition="String.IsEqual(VideoPlayer.VideoCodec,prores)">ProRes</value>
 		<value>[UPPERCASE]$INFO[VideoPlayer.VideoCodec][/UPPERCASE]</value>
 	</variable>
 	<variable name="VideoResolutionTypePlayVar">
