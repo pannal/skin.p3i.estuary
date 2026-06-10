@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.p3i.estuary" version="8.8.12" name="p3i.Estuary" provider-name="phil65, Ichabod Fletchman">
+<addon id="skin.p3i.estuary" version="8.8.13" name="p3i.Estuary" provider-name="phil65, Ichabod Fletchman">
 	<requires>
 		<import addon="xbmc.gui" version="5.17.0"/>
 	</requires>

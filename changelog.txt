@@ -1,3 +1,9 @@
+[B]8.8.13[/B]
+• Codec logos: optional dark variant for the startup logos
+• Add ProRes to the video codec variables
+• PlayerProcessInfo: show the CMv4.0 → CMv2.9 down-convert state in the DV Metadata section
+• Fix overlapping media flags on music videos
+
 [B]8.8.12[/B]
 • Codec logos: add 'keep inside active area' setting (default on)
 
