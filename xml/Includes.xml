@@ -376,7 +376,7 @@
 			</include>
 		</control>
 		<control type="grouplist">
-			<visible>Container.Content(albums) | Window.IsActive(10502)</visible>
+			<visible>!String.IsEqual(ListItem.DbType,musicvideo) + [Container.Content(albums) | Window.IsActive(10502)]</visible>
 			<orientation>horizontal</orientation>
 			<top>17</top>
 			<right>20</right>
