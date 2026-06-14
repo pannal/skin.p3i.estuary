@@ -801,8 +801,8 @@ msgstr "Codec-Logos vertikal stapeln"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31671"
-msgid "Keep codec logos inside DV active area"
-msgstr "Codec-Logos immer im aktiven Bildbereich halten"
+msgid "Keep codec logos inside DV L5 active area"
+msgstr "Codec-Logos immer im aktiven DV-L5-Bildbereich halten"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31672"
