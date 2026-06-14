@@ -972,7 +972,7 @@ msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31671"
-msgid "Keep codec logos inside DV active area"
+msgid "Keep codec logos inside DV L5 active area"
 msgstr ""
 
 #: /xml/SkinSettings.xml
