@@ -86,9 +86,9 @@
 			<animation effect="slide" end="940,0" time="0" condition="Skin.HasSetting(osd.userightCodecLogos) + !Skin.HasSetting(osd.codeclogoshorizontal)">Conditional</animation>
 			<animation effect="slide" end="82,0" time="0" condition="Skin.HasSetting(osd.usecenterCodecLogos) + !Skin.HasSetting(osd.codeclogoshorizontal)">Conditional</animation>
 			<!-- Active-area: slide down out of the DV letterbox bar by aspect class -->
-			<animation effect="slide" end="0,60" time="0" condition="[ !Skin.HasSetting(osd.codeclogosactiveareaoff) | System.GetBool(coreelec.amlogic.dolbyvision.restrict.subs.active.area) ] + String.IsEqual(Player.Process(video.dovi.active.area.class),1)">Conditional</animation>
-			<animation effect="slide" end="0,104" time="0" condition="[ !Skin.HasSetting(osd.codeclogosactiveareaoff) | System.GetBool(coreelec.amlogic.dolbyvision.restrict.subs.active.area) ] + String.IsEqual(Player.Process(video.dovi.active.area.class),2)">Conditional</animation>
-			<animation effect="slide" end="0,138" time="0" condition="[ !Skin.HasSetting(osd.codeclogosactiveareaoff) | System.GetBool(coreelec.amlogic.dolbyvision.restrict.subs.active.area) ] + String.IsEqual(Player.Process(video.dovi.active.area.class),3)">Conditional</animation>
+			<animation effect="slide" end="0,60" time="0" condition="!Skin.HasSetting(osd.codeclogosactiveareaoff) + String.IsEqual(Player.Process(video.dovi.active.area.class),1)">Conditional</animation>
+			<animation effect="slide" end="0,104" time="0" condition="!Skin.HasSetting(osd.codeclogosactiveareaoff) + String.IsEqual(Player.Process(video.dovi.active.area.class),2)">Conditional</animation>
+			<animation effect="slide" end="0,138" time="0" condition="!Skin.HasSetting(osd.codeclogosactiveareaoff) + String.IsEqual(Player.Process(video.dovi.active.area.class),3)">Conditional</animation>
 			<!-- Video Codec Flags -->
 			<include content="VideoCodecFlag">
 				<param name="groupId">40</param><param name="imageId">41</param>
@@ -240,9 +240,9 @@
 			<animation effect="slide" end="940,0" time="0" condition="Skin.HasSetting(osd.userightCodecLogos) + !Skin.HasSetting(osd.codeclogoshorizontal)">Conditional</animation>
 			<animation effect="slide" end="82,0" time="0" condition="Skin.HasSetting(osd.usecenterCodecLogos) + !Skin.HasSetting(osd.codeclogoshorizontal)">Conditional</animation>
 			<!-- Active-area: slide down out of the DV letterbox bar by aspect class -->
-			<animation effect="slide" end="0,60" time="0" condition="[ !Skin.HasSetting(osd.codeclogosactiveareaoff) | System.GetBool(coreelec.amlogic.dolbyvision.restrict.subs.active.area) ] + String.IsEqual(Player.Process(video.dovi.active.area.class),1)">Conditional</animation>
-			<animation effect="slide" end="0,104" time="0" condition="[ !Skin.HasSetting(osd.codeclogosactiveareaoff) | System.GetBool(coreelec.amlogic.dolbyvision.restrict.subs.active.area) ] + String.IsEqual(Player.Process(video.dovi.active.area.class),2)">Conditional</animation>
-			<animation effect="slide" end="0,138" time="0" condition="[ !Skin.HasSetting(osd.codeclogosactiveareaoff) | System.GetBool(coreelec.amlogic.dolbyvision.restrict.subs.active.area) ] + String.IsEqual(Player.Process(video.dovi.active.area.class),3)">Conditional</animation>
+			<animation effect="slide" end="0,60" time="0" condition="!Skin.HasSetting(osd.codeclogosactiveareaoff) + String.IsEqual(Player.Process(video.dovi.active.area.class),1)">Conditional</animation>
+			<animation effect="slide" end="0,104" time="0" condition="!Skin.HasSetting(osd.codeclogosactiveareaoff) + String.IsEqual(Player.Process(video.dovi.active.area.class),2)">Conditional</animation>
+			<animation effect="slide" end="0,138" time="0" condition="!Skin.HasSetting(osd.codeclogosactiveareaoff) + String.IsEqual(Player.Process(video.dovi.active.area.class),3)">Conditional</animation>
 			<!-- Video Codec Flags -->
 			<include content="VideoCodecFlag">
 				<param name="groupId">40</param><param name="imageId">41</param>
