@@ -357,6 +357,18 @@
 					<onclick>Skin.SetNumeric(OSDAutoCloseTime)</onclick>
 					<enable>Skin.HasSetting(OSDAutoClose)</enable>
 				</control>
+				<control type="radiobutton" id="634">
+					<label>$LOCALIZE[31673]</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(OSDHidePause)</selected>
+					<onclick>Skin.ToggleSetting(OSDHidePause)</onclick>
+				</control>
+				<control type="radiobutton" id="635">
+					<label>$LOCALIZE[31674]</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(OSDHideSeek)</selected>
+					<onclick>Skin.ToggleSetting(OSDHideSeek)</onclick>
+				</control>
 			</control>
 			<control type="image">
 				<description>Dialog Header image</description>
