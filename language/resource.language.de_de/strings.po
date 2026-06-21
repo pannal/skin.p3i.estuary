@@ -808,3 +808,13 @@ msgstr "Codec-Logos immer im aktiven DV-L5-Bildbereich halten"
 msgctxt "#31672"
 msgid "Dark codec logos"
 msgstr "Dunkle Codec-Logos"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31673"
+msgid "Hide progress bar on pause"
+msgstr "Fortschrittsanzeige bei Pause ausblenden"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31674"
+msgid "Hide progress bar on seek"
+msgstr "Fortschrittsanzeige beim Suchen ausblenden"
