@@ -804,7 +804,7 @@
 		<value>[UPPERCASE]$INFO[ListItem.AudioCodec][/UPPERCASE]</value>
 	</variable>
 	<variable name="AudioChannelsVar">
-		<value condition="Integer.IsEqual(ListItem.AudioChannels,1) | Integer.IsEqual(ListItem.MusicChannels,1)">Mono</value>
+		<value condition="Integer.IsEqual(ListItem.AudioChannels,1) | Integer.IsEqual(ListItem.MusicChannels,1)">1.0</value>
 		<value condition="Integer.IsEqual(ListItem.AudioChannels,2) | Integer.IsEqual(ListItem.MusicChannels,2)">2.0</value>
 		<value condition="Integer.IsEqual(ListItem.AudioChannels,3) | Integer.IsEqual(ListItem.MusicChannels,3)">2.1</value>
 		<value condition="Integer.IsEqual(ListItem.AudioChannels,4) | Integer.IsEqual(ListItem.MusicChannels,4)">4.0</value>
@@ -812,7 +812,6 @@
 		<value condition="Integer.IsEqual(ListItem.AudioChannels,6) | Integer.IsEqual(ListItem.MusicChannels,6)">5.1</value>
 		<value condition="Integer.IsEqual(ListItem.AudioChannels,7) | Integer.IsEqual(ListItem.MusicChannels,7)">6.1</value>
 		<value condition="Integer.IsEqual(ListItem.AudioChannels,8) | Integer.IsEqual(ListItem.MusicChannels,8)">7.1</value>
-		<value condition="Integer.IsEqual(ListItem.AudioChannels,10) | Integer.IsEqual(ListItem.MusicChannels,10)">9.1</value>
 	</variable>
 	<variable name="ObjectAudioVar">
 		<value condition="String.IsEqual(ListItem.AudioCodec,eac3_ddp_atmos)">Atmos</value>
@@ -934,7 +933,7 @@
 		<value>[UPPERCASE]$INFO[VideoPlayer.AudioCodec][/UPPERCASE]</value>
 	</variable>
 	<variable name="AudioChannelsPlayVar">
-		<value condition="Integer.IsEqual(VideoPlayer.AudioChannels,1) | Integer.IsEqual(MusicPlayer.Channels,1)">Mono</value>
+		<value condition="Integer.IsEqual(VideoPlayer.AudioChannels,1) | Integer.IsEqual(MusicPlayer.Channels,1)">1.0</value>
 		<value condition="Integer.IsEqual(VideoPlayer.AudioChannels,2) | Integer.IsEqual(MusicPlayer.Channels,2)">2.0</value>
 		<value condition="Integer.IsEqual(VideoPlayer.AudioChannels,3) | Integer.IsEqual(MusicPlayer.Channels,3)">2.1</value>
 		<value condition="Integer.IsEqual(VideoPlayer.AudioChannels,4) | Integer.IsEqual(MusicPlayer.Channels,4)">4.0</value>
@@ -942,7 +941,6 @@
 		<value condition="Integer.IsEqual(VideoPlayer.AudioChannels,6) | Integer.IsEqual(MusicPlayer.Channels,6)">5.1</value>
 		<value condition="Integer.IsEqual(VideoPlayer.AudioChannels,7) | Integer.IsEqual(MusicPlayer.Channels,7)">6.1</value>
 		<value condition="Integer.IsEqual(VideoPlayer.AudioChannels,8) | Integer.IsEqual(MusicPlayer.Channels,8)">7.1</value>
-		<value condition="Integer.IsEqual(VideoPlayer.AudioChannels,10) | Integer.IsEqual(MusicPlayer.Channels,10)">9.1</value>
 	</variable>
 	<variable name="ObjectAudioPlayVar">
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,eac3_ddp_atmos)">Atmos</value>
@@ -1070,12 +1068,10 @@
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,2)">FL, FR</value>
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,3)">FL, FR, LFE</value>
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,4)">FL, FR, BL, BR</value>
-        <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,5)">FL, FR, LFE, BL, BR</value>
-        <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,6)">FL, FR, FC, LFE, SL, SR</value>
-        <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,7)">FL, FR, FC, LFE, BC, SL, SR</value>
-        <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,8)">FL, FR, FC, LFE, BL, BR, SL, SR</value>
-        <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,9)">FL, FR, FC, LFE, BL, BR, SL, SR, FWL</value>
-        <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,10)">FL, FR, FC, LFE, BL, BR, SL, SR, FWL, FWR</value>
+        <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,5)">FL, FR, FC, SL, SR</value>
+        <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,6)">FL, FR, FC, SL, SR, LFE</value>
+        <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,7)">FL, FR, FC, SL, SR, BC, LFE</value>
+        <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,8)">FL, FR, FC, SL, SR, BL, BR, LFE</value>
     </variable>
 	<variable name="CodecLogoPositionLabel2Var">
 		<value condition="Skin.HasSetting(osd.usecenterCodecLogos)">$LOCALIZE[31666]</value>
