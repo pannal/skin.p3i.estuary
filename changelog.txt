@@ -1,3 +1,7 @@
+[B]8.8.14[/B]
+• Add new settings for hiding progress bar during pause and/or during seek
+• Unlink "Restrict subtitles to DV active area" setting from "Keep codec logos inside DV L5 active area" setting
+
 [B]8.8.13[/B]
 • Codec logos: optional dark variant for the startup logos
 • Add ProRes to the video codec variables
