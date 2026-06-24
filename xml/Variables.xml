@@ -980,8 +980,10 @@
 	<variable name="DVSourceProfileExtVar">
 		<value>$INFO[Player.Process(video.source.dovi.profile)].$INFO[Player.Process(video.source.dovi.bl.signal.compatibility)]</value>
 	</variable>
-	<variable name="DVTunnelVar">
+	<variable name="DVSignalTypeVar">
 		<value condition="Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),1)">DV Tunnel</value>
+		<value condition="Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),0) + String.Contains(Player.Process(amlogic.eoft_gamut),DV-LL)">LLDV</value>
+		<value condition="Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),0)">HDR10</value>
 	</variable>
 	<variable name="|">
 		<value>[COLOR ff404040]|[/COLOR]</value>
@@ -1081,5 +1083,17 @@
 	<variable name="CodecLogoColorVar">
 		<value condition="Skin.HasSetting(osd.codeclogolight)">codecs/</value>
 		<value>codecs/b_</value>
+	</variable>
+	<variable name="PixFormatVar">
+		<value condition="[String.Contains(Player.Process(amlogic.pixformat),8-bit) + String.Contains(Player.Process(amlogic.pixformat),YUV420)]">8-bit, YUV 4:2:0</value>
+		<value condition="[String.Contains(Player.Process(amlogic.pixformat),8-bit) + String.Contains(Player.Process(amlogic.pixformat),YUV422)]">8-bit, YUV 4:2:2</value>
+		<value condition="[String.Contains(Player.Process(amlogic.pixformat),8-bit) + String.Contains(Player.Process(amlogic.pixformat),YUV444)]">8-bit, YUV 4:4:4</value>
+		<value condition="[String.Contains(Player.Process(amlogic.pixformat),10-bit) + String.Contains(Player.Process(amlogic.pixformat),YUV420)]">10-bit, YUV 4:2:0</value>
+		<value condition="[String.Contains(Player.Process(amlogic.pixformat),10-bit) + String.Contains(Player.Process(amlogic.pixformat),YUV422)]">10-bit, YUV 4:2:2</value>
+		<value condition="[String.Contains(Player.Process(amlogic.pixformat),10-bit) + String.Contains(Player.Process(amlogic.pixformat),YUV444)]">10-bit, YUV 4:4:4</value>
+		<value condition="[String.Contains(Player.Process(amlogic.pixformat),12-bit) + String.Contains(Player.Process(amlogic.pixformat),YUV420)]">12-bit, YUV 4:2:0</value>
+		<value condition="[String.Contains(Player.Process(amlogic.pixformat),12-bit) + String.Contains(Player.Process(amlogic.pixformat),YUV422)]">12-bit, YUV 4:2:2</value>
+		<value condition="[String.Contains(Player.Process(amlogic.pixformat),12-bit) + String.Contains(Player.Process(amlogic.pixformat),YUV444)]">12-bit, YUV 4:4:4</value>
+		<value>$INFO[Player.Process(amlogic.pixformat)]</value>
 	</variable>
 </includes>
