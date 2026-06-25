@@ -1174,7 +1174,7 @@
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
-						<label>$INFO[Player.Process(amlogic.pixformat)]$VAR[DVTunnelVar, [COLOR dimgrey](,)[/COLOR]]</label>
+						<label>$VAR[PixFormatVar]$VAR[DVSignalTypeVar, [COLOR dimgrey](,)[/COLOR]]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
 					</control>
