@@ -1677,7 +1677,7 @@
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
-						<label>$VAR[|] $INFO[Player.Process(amlogic.vs10.mode)]</label>
+						<label> $VAR[|] $INFO[Player.Process(amlogic.vs10.mode)]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
 					</control>
