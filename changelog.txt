@@ -1,3 +1,8 @@
+[B]8.8.15[/B]
+• PlayerProcessInfo: indicate Player-Led DV (LLDV) and HDR10 in the video output info, with improved formatting
+• PlayerProcessInfo: scroll long subtitle names
+• PlayerProcessInfo: fix default audio channels layout
+
 [B]8.8.14[/B]
 • Add new settings for hiding progress bar during pause and/or during seek
 • Unlink "Restrict subtitles to DV active area" setting from "Keep codec logos inside DV L5 active area" setting
