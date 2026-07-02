@@ -159,6 +159,7 @@
 						</include>
 						<onclick>Action(Close)</onclick>
 						<onclick>ActivateWindow(1111)</onclick>
+						<visible>Player.Process(videohwdecoder)</visible>
 					</control>
 					<control type="radiobutton" id="70011">
 						<include content="OSDButton">
