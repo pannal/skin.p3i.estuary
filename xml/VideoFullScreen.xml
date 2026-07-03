@@ -112,12 +112,12 @@
 			</include>
 			<include content="VideoCodecFlag">
 				<param name="groupId">48</param><param name="imageId">49</param>
-				<param name="visible">Integer.IsEqual(Player.Process(video.source.hdr.type.raw),3) + !String.IsEqual(Player.Process(video.dovi.el.type),full)</param>
+				<param name="visible">Integer.IsEqual(Player.Process(video.source.hdr.type.raw),3) + !String.IsEqual(Player.Process(video.dovi.el.type),full) + String.IsEqual(Player.Process(amlogic.vs10.mode),Dolby Vision)</param>
 				<param name="texture">dolby_vision.png</param>
 			</include>
 			<include content="VideoCodecFlag">
 				<param name="groupId">50</param><param name="imageId">51</param>
-				<param name="visible">Integer.IsEqual(Player.Process(video.source.hdr.type.raw),3) + String.IsEqual(Player.Process(video.dovi.el.type),full)</param>
+				<param name="visible">Integer.IsEqual(Player.Process(video.source.hdr.type.raw),3) + String.IsEqual(Player.Process(video.dovi.el.type),full) + String.IsEqual(Player.Process(amlogic.vs10.mode),Dolby Vision)</param>
 				<param name="texture">dolby_vision_fel.png</param>
 			</include>
 			<include content="VideoCodecFlag">
@@ -272,12 +272,12 @@
 			<include content="VideoCodecFlag">
 				<param name="groupId">48</param><param name="imageId">49</param>
 				<param name="visible">[String.IsEqual(VideoPlayer.VideoCodec,av1) + String.Contains(VideoPlayer.HdrType,dolbyvision)] + String.Contains(Player.Process(amlogic.vs10.mode),Dolby Vision)</param>
-				<param name="visible">Integer.IsEqual(Player.Process(video.source.hdr.type.raw),3) + !String.IsEqual(Player.Process(video.dovi.el.type),full)</param>
+				<param name="visible">Integer.IsEqual(Player.Process(video.source.hdr.type.raw),3) + !String.IsEqual(Player.Process(video.dovi.el.type),full) + String.IsEqual(Player.Process(amlogic.vs10.mode),Dolby Vision)</param>
 				<param name="texture">dolby_vision.png</param>
 			</include>
 			<include content="VideoCodecFlag">
 				<param name="groupId">50</param><param name="imageId">51</param>
-				<param name="visible">Integer.IsEqual(Player.Process(video.source.hdr.type.raw),3) + String.IsEqual(Player.Process(video.dovi.el.type),full)</param>
+				<param name="visible">Integer.IsEqual(Player.Process(video.source.hdr.type.raw),3) + String.IsEqual(Player.Process(video.dovi.el.type),full) + String.IsEqual(Player.Process(amlogic.vs10.mode),Dolby Vision)</param>
 				<param name="texture">dolby_vision_fel.png</param>
 			</include>
 			<include content="VideoCodecFlag">
