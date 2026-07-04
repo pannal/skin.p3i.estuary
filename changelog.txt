@@ -1,3 +1,7 @@
+[B]8.8.16[/B]
+• Fix overlapping DV and VS10 SDR/HDR10 codec logos
+• Enable the VS10 OSD button only when using the hardware decoder
+
 [B]8.8.15[/B]
 • PlayerProcessInfo: indicate Player-Led DV (LLDV) and HDR10 in the video output info, with improved formatting
 • PlayerProcessInfo: scroll long subtitle names
