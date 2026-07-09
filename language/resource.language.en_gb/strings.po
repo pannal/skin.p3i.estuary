@@ -927,12 +927,12 @@ msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31662"
-msgid "Show memory usage in top bar"
+msgid "Show RAM usage in top bar"
 msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31663"
-msgid "Show cpu temp and memory usage in top bar"
+msgid "Show CPU temp and RAM usage in top bar"
 msgstr ""
 
 #: /xml/SkinSettings.xml
