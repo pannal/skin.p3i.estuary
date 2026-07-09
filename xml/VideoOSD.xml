@@ -27,9 +27,9 @@
 				<top>0</top>
 				<align>right</align>
 				<aligny>center</aligny>
-				<width>1000</width>
+				<width>1900</width>
 				<height>50</height>
-				<label>$VAR[OSDHelpTextVar]</label>
+				<label>$VAR[OSDHelpTextVideoVar]</label>
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="group" id="200">

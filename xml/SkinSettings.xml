@@ -357,6 +357,12 @@
 					<onclick>Skin.SetNumeric(OSDAutoCloseTime)</onclick>
 					<enable>Skin.HasSetting(OSDAutoClose)</enable>
 				</control>
+				<control type="radiobutton" id="636">
+					<label>$LOCALIZE[31675]</label>
+					<include>DefaultSettingButton</include>
+					<selected>!Skin.HasSetting(OSDVideoStaticLabel)</selected>
+					<onclick>Skin.ToggleSetting(OSDVideoStaticLabel)</onclick>
+				</control>
 				<control type="radiobutton" id="634">
 					<label>$LOCALIZE[31673]</label>
 					<include>DefaultSettingButton</include>

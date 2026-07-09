@@ -818,3 +818,8 @@ msgstr "Fortschrittsanzeige bei Pause ausblenden"
 msgctxt "#31674"
 msgid "Hide progress bar on seek"
 msgstr "Fortschrittsanzeige beim Suchen ausblenden"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31675"
+msgid "Dynamic video OSD icon labels"
+msgstr "Dynamische Video-OSD-Symbolbeschriftungen"
