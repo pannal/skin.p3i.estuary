@@ -540,10 +540,6 @@
 	<variable name="BreadcrumbsGameVar">
 		<value>$LOCALIZE[15016]</value>
 	</variable>
-	<variable name="RepeatButtonColordiffuseVar">
-		<value condition="Control.HasFocus(704)">button_focus</value>
-		<value>FFFFFFFF</value>
-	</variable>
 	<variable name="PVRChannelMgrHeader">
 		<value condition="!String.IsEmpty(Window.Property(IsRadio))">$LOCALIZE[19199] - $LOCALIZE[19024]</value>
 		<value>$LOCALIZE[19199] - $LOCALIZE[19023]</value>
@@ -892,11 +888,6 @@
 		<value condition="String.IsEqual(VideoPlayer.VideoResolution,4K)">UHD</value>
 		<value condition="String.IsEqual(VideoPlayer.VideoResolution,8K)">UHD</value>	
 	</variable>
-	<variable name="VideoHDRPlayVar">
-		<value condition="Integer.IsEqual(Player.Process(video.source.hdr.type.raw),3) + Integer.IsEqual(Player.Process(video.source.additional.hdr.type.raw),2)">Dolby Vision[COLOR grey]|[/COLOR]HDR10+</value>
-		<value condition="Integer.IsEqual(Player.Process(video.source.hdr.type.raw),2) + Integer.IsEqual(Player.Process(video.source.additional.hdr.type.raw),3)">HDR10+[COLOR grey]|[/COLOR]Dolby Vision</value>
-		<value>$INFO[Player.Process(video.source.hdr.type)]</value>
-	</variable>
 	<variable name="AudioCodecPlayVar">
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,eac3_ddp_atmos)">Dolby Digital+</value>
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,truehd_atmos)">Dolby TrueHD</value>
@@ -1047,8 +1038,8 @@
 		<value condition="Integer.IsEqual(Player.Process(video.dovi.l5.detect.state),6)">Running</value>
 	</variable>
 	<variable name="VS10ModeOriginalVar">
-		<value condition="String.IsEqual(Player.Process(amlogic.vs10.mode),Bypass) | [String.IsEqual(Player.Process(amlogic.vs10.mode),Dolby Vision) + String.IsEqual(Player.Process(video.hdr.type),Dolby Vision)]">[COLOR lightgreen]$INFO[Player.Process(video.hdr.type)][/COLOR]</value>
-		<value>$INFO[Player.Process(video.hdr.type)]</value>
+		<value condition="String.IsEqual(Player.Process(amlogic.vs10.mode),Bypass) | [String.IsEqual(Player.Process(amlogic.vs10.mode),Dolby Vision) + Integer.IsEqual(Player.Process(video.source.hdr.type.raw),3)]">[COLOR lightgreen]$INFO[Player.Process(video.source.hdr.type)][/COLOR]</value>
+		<value>$INFO[Player.Process(video.source.hdr.type)]</value>
 	</variable>
 	<variable name="VS10ModeSDRVar">
 		<value condition="String.IsEqual(Player.Process(amlogic.vs10.mode),SDR)">[COLOR lightgreen]VS10 SDR[/COLOR]</value>
@@ -1059,7 +1050,7 @@
 		<value>VS10 HDR10</value>
 	</variable>
 	<variable name="VS10ModeDVVar">
-		<value condition="String.IsEqual(Player.Process(amlogic.vs10.mode),Dolby Vision) + !String.IsEqual(Player.Process(video.hdr.type),Dolby Vision)">[COLOR lightgreen]VS10 Dolby Vision[/COLOR]</value>
+		<value condition="String.IsEqual(Player.Process(amlogic.vs10.mode),Dolby Vision) + !Integer.IsEqual(Player.Process(video.source.hdr.type.raw),3)">[COLOR lightgreen]VS10 Dolby Vision[/COLOR]</value>
 		<value>VS10 Dolby Vision</value>
 	</variable>
     <variable name="AudioLayoutVar">
@@ -1068,9 +1059,9 @@
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,3)">FL, FR, LFE</value>
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,4)">FL, FR, BL, BR</value>
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,5)">FL, FR, FC, SL, SR</value>
-        <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,6)">FL, FR, FC, SL, SR, LFE</value>
-        <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,7)">FL, FR, FC, SL, SR, BC, LFE</value>
-        <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,8)">FL, FR, FC, SL, SR, BL, BR, LFE</value>
+        <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,6)">FL, FR, FC, LFE, SL, SR</value>
+        <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,7)">FL, FR, FC, LFE, SL, SR, BC</value>
+        <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,8)">FL, FR, FC, LFE, BL, BR, SL, SR</value>
     </variable>
 	<variable name="CodecLogoPositionLabel2Var">
 		<value condition="Skin.HasSetting(osd.usecenterCodecLogos)">$LOCALIZE[31666]</value>
