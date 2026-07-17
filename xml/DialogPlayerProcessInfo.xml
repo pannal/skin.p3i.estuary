@@ -1926,7 +1926,7 @@
 					<visible>VideoPlayer.Content(livetv)</visible>
 					<onfocus>SetProperty(PlayerInfoDialogFocus,5551,Home)</onfocus>
 				</control>
-				<control type="button" id="5552"> + )
+				<control type="button" id="5552">
 					<visible>!String.Contains(Player.Process(amlogic.vs10.mode),SDR)</visible>
 					<visible>String.IsEqual(Player.Process(video.dovi.has.config),1) |
 					         String.IsEqual(Player.Process(video.dovi.has.header),1) |
