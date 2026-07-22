@@ -73,10 +73,9 @@
 				<font>font13</font>
 			</control>
 		</control>
-		<control type="group" id="2">
+		<control type="group" id="888">
 			<depth>DepthOSD+</depth>
-			<visible>[String.IsEqual(Player.Process(av.change),1) + !String.IsEqual(VideoPlayer.VideoCodec,av1) + !Skin.HasSetting(osd.hidecodecstartuplogos)] | [Skin.HasSetting(osd.codeclogospreview) + !String.IsEqual(VideoPlayer.VideoCodec,av1)]</visible>
-			<visible>true</visible>
+			<visible>[Skin.TimerIsRunning(codeclogos) | Skin.HasSetting(osd.codeclogospreview)] + !String.IsEqual(VideoPlayer.VideoCodec,av1)</visible>
 			<animation type="Hidden">
 				<effect type="fade" start="100" end="0" time="500" tween="sine"/>
 			</animation>
@@ -227,10 +226,9 @@
 				<param name="texture">dtshd_ma_x_imax.png</param>
 			</include>
 		</control>
-		<control type="group" id="21">
+		<control type="group" id="777">
 			<depth>DepthOSD+</depth>
-			<visible>[String.IsEqual(Player.Process(av.change),1) + String.IsEqual(VideoPlayer.VideoCodec,av1) + !Skin.HasSetting(osd.hidecodecstartuplogos)] | [Skin.HasSetting(osd.codeclogospreview) + String.IsEqual(VideoPlayer.VideoCodec,av1)]</visible>
-			<visible>true</visible>
+			<visible>[Skin.TimerIsRunning(codeclogos) | Skin.HasSetting(osd.codeclogospreview)] + String.IsEqual(VideoPlayer.VideoCodec,av1)</visible>
 			<animation type="Hidden">
 				<effect type="fade" start="100" end="0" time="500" tween="sine"/>
 			</animation>

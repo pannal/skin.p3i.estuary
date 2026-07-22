@@ -796,8 +796,8 @@ msgstr "Rechts"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31668"
-msgid "Position"
-msgstr "Position"
+msgid "Codec logos position"
+msgstr "Position der Codec-Logos"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31669"
@@ -833,3 +833,13 @@ msgstr "Fortschrittsanzeige beim Suchen ausblenden"
 msgctxt "#31675"
 msgid "Dynamic video OSD icon labels"
 msgstr "Dynamische Video-OSD-Symbolbeschriftungen"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31676"
+msgid "Codec logos duration (seconds)"
+msgstr "Dauer der Codec-Logos (Sekunden)"
+
+#: /xml/Variables.xml
+msgctxt "#31677"
+msgid "Default (7)"
+msgstr "Standard (7)"

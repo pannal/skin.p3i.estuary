@@ -957,7 +957,7 @@ msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31668"
-msgid "Position"
+msgid "Codec logos position"
 msgstr ""
 
 #: /xml/SkinSettings.xml
@@ -993,4 +993,14 @@ msgstr ""
 #: /xml/SkinSettings.xml
 msgctxt "#31675"
 msgid "Dynamic video OSD icon labels"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31676"
+msgid "Codec logos duration (seconds)"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#31677"
+msgid "Default (7)"
 msgstr ""

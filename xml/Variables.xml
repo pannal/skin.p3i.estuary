@@ -1063,6 +1063,10 @@
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,7)">FL, FR, FC, LFE, SL, SR, BC</value>
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,8)">FL, FR, FC, LFE, BL, BR, SL, SR</value>
     </variable>
+	<variable name="CodecLogoDurationLabelVar">
+		<value condition="Integer.IsLess(Skin.Numeric(osd.codeclogoduration),1)">$LOCALIZE[31677]</value>
+		<value>$INFO[Skin.String(osd.codeclogoduration)]</value>
+	</variable>
 	<variable name="CodecLogoPositionLabel2Var">
 		<value condition="Skin.HasSetting(osd.usecenterCodecLogos)">$LOCALIZE[31666]</value>
 		<value condition="Skin.HasSetting(osd.userightCodecLogos)">$LOCALIZE[31667]</value>

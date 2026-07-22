@@ -15,4 +15,31 @@
         <reset>Player.Seeking | Player.Forwarding | Player.Rewinding | Player.HasPerformedSeek(1)</reset>
         <stop>Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(1109_topbaroverlay),5) | Player.Playing</stop>
     </timer>
+    <!-- Visibility driver: decides WHEN the logos are shown (duration).
+         Drives Skin.TimerIsRunning(codeclogos), which VideoFullScreen.xml keys on. -->
+    <timer>
+        <name>codeclogos</name>
+        <description>Shows the codec startup logos when fullscreen video starts (duration)</description>
+        <start>Window.IsActive(fullscreenvideo) + !Skin.HasSetting(osd.hidecodecstartuplogos) + !Skin.HasSetting(osd.codeclogospreview) + !String.IsEqual(window(home).Property(codeclogoslatch),1)</start>
+        <stop>!Window.IsActive(fullscreenvideo) | [Integer.IsLess(Skin.Numeric(osd.codeclogoduration),1) + Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(codeclogos),7) | Integer.IsGreaterOrEqual(Skin.Numeric(osd.codeclogoduration),1) + Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(codeclogos),Skin.Numeric(osd.codeclogoduration))]</stop>
+        <onstart>SetProperty(codeclogoslatch,1,home)</onstart>
+    </timer>
+    <!-- Gate: clears the latch when the fullscreen video window closes, re-arming next start. -->
+    <timer>
+        <name>codeclogosgate</name>
+        <description>Clears the codeclogos latch when the fullscreen video window closes, re-arming the next start</description>
+        <start>Skin.TimerIsRunning(codeclogos)</start>
+        <stop>!Window.IsActive(fullscreenvideo)</stop>
+        <onstop>SetProperty(codeclogoslatch,0,home)</onstop>
+    </timer>
+    <!-- DV property publisher: skin.codeclogosonscreen tracks whether a codec-logo group is ACTUALLY on screen,
+         so the property covers the fade-out and clears exactly when the fade finishes. -->
+    <timer>
+        <name>codeclogososd</name>
+        <description>Publishes skin.codeclogosonscreen while a codec-logo group is on screen (incl. fade-out)</description>
+        <start>Window.IsActive(fullscreenvideo) + [Control.IsVisible(888) | Control.IsVisible(777)]</start>
+        <stop>!Window.IsActive(fullscreenvideo) | ![Control.IsVisible(888) | Control.IsVisible(777)]</stop>
+        <onstart>SetProperty(skin.codeclogosonscreen,1,home)</onstart>
+        <onstop>SetProperty(skin.codeclogosonscreen,0,home)</onstop>
+    </timer>
 </timers>
