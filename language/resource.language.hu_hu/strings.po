@@ -770,10 +770,10 @@ msgstr "Rendszer"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31662"
-msgid "Show memory usage in top bar"
-msgstr "Ram használat megjelenítése az óra alatt"
+msgid "Show RAM usage in top bar"
+msgstr "RAM használat megjelenítése az óra alatt"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31663"
-msgid "Show cpu temp and memory usage in top bar"
-msgstr "Cpu hőmérséklet + Ram használat megjelenítése az óra alatt"
+msgid "Show CPU temp and RAM usage in top bar"
+msgstr "CPU hőmérséklet + RAM használat megjelenítése az óra alatt"

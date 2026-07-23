@@ -31,12 +31,13 @@
                         <label>$VAR[VS10ModeHDRVar]</label>
                         <onclick>Action(vs10.hdr10)</onclick>
                         <onclick>Dialog.Close(1111)</onclick>
+						<visible>!Integer.IsEqual(Player.Process(video.source.hdr.type.raw),3)</visible>
 					</item>
 					<item>
                         <label>$VAR[VS10ModeDVVar]</label>
                         <onclick>Action(vs10.dv)</onclick>
                         <onclick>Dialog.Close(1111)</onclick>
-						<visible>!String.IsEqual(Player.Process(video.hdr.type),Dolby Vision)</visible>
+						<visible>!Integer.IsEqual(Player.Process(video.source.hdr.type.raw),3)</visible>
 					</item>
 				</content>
 			</control>

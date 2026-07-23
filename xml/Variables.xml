@@ -335,9 +335,6 @@
 		<value condition="Control.HasFocus(70011)">Player Process Info</value>
 		<value condition="Control.HasFocus(70012)">Player Debug</value>
 		<value condition="Control.HasFocus(70013)">VS10 Mode</value>
-		<value condition="Control.HasFocus(70014)">VS10 SDR</value>
-		<value condition="Control.HasFocus(70015)">VS10 HDR10</value>
-		<value condition="Control.HasFocus(70016)">VS10 Dolby Vision</value>
 		<value condition="Control.HasFocus(70040)">$LOCALIZE[19019]</value>
 		<value condition="Control.HasFocus(70041)">$LOCALIZE[19069]</value>
 		<value condition="Control.HasFocus(70042)">$LOCALIZE[31065]</value>
@@ -542,10 +539,6 @@
 	</variable>
 	<variable name="BreadcrumbsGameVar">
 		<value>$LOCALIZE[15016]</value>
-	</variable>
-	<variable name="RepeatButtonColordiffuseVar">
-		<value condition="Control.HasFocus(704)">button_focus</value>
-		<value>FFFFFFFF</value>
 	</variable>
 	<variable name="PVRChannelMgrHeader">
 		<value condition="!String.IsEmpty(Window.Property(IsRadio))">$LOCALIZE[19199] - $LOCALIZE[19024]</value>
@@ -895,11 +888,6 @@
 		<value condition="String.IsEqual(VideoPlayer.VideoResolution,4K)">UHD</value>
 		<value condition="String.IsEqual(VideoPlayer.VideoResolution,8K)">UHD</value>	
 	</variable>
-	<variable name="VideoHDRPlayVar">
-		<value condition="Integer.IsEqual(Player.Process(video.source.hdr.type.raw),3) + Integer.IsEqual(Player.Process(video.source.additional.hdr.type.raw),2)">Dolby Vision[COLOR grey]|[/COLOR]HDR10+</value>
-		<value condition="Integer.IsEqual(Player.Process(video.source.hdr.type.raw),2) + Integer.IsEqual(Player.Process(video.source.additional.hdr.type.raw),3)">HDR10+[COLOR grey]|[/COLOR]Dolby Vision</value>
-		<value>$INFO[Player.Process(video.source.hdr.type)]</value>
-	</variable>
 	<variable name="AudioCodecPlayVar">
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,eac3_ddp_atmos)">Dolby Digital+</value>
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,truehd_atmos)">Dolby TrueHD</value>
@@ -1050,8 +1038,8 @@
 		<value condition="Integer.IsEqual(Player.Process(video.dovi.l5.detect.state),6)">Running</value>
 	</variable>
 	<variable name="VS10ModeOriginalVar">
-		<value condition="String.IsEqual(Player.Process(amlogic.vs10.mode),Bypass) | [String.IsEqual(Player.Process(amlogic.vs10.mode),Dolby Vision) + String.IsEqual(Player.Process(video.hdr.type),Dolby Vision)]">[COLOR lightgreen]$INFO[Player.Process(video.hdr.type)][/COLOR]</value>
-		<value>$INFO[Player.Process(video.hdr.type)]</value>
+		<value condition="String.IsEqual(Player.Process(amlogic.vs10.mode),Bypass) | [String.IsEqual(Player.Process(amlogic.vs10.mode),Dolby Vision) + Integer.IsEqual(Player.Process(video.source.hdr.type.raw),3)]">[COLOR lightgreen]$INFO[Player.Process(video.source.hdr.type)][/COLOR]</value>
+		<value>$INFO[Player.Process(video.source.hdr.type)]</value>
 	</variable>
 	<variable name="VS10ModeSDRVar">
 		<value condition="String.IsEqual(Player.Process(amlogic.vs10.mode),SDR)">[COLOR lightgreen]VS10 SDR[/COLOR]</value>
@@ -1062,7 +1050,7 @@
 		<value>VS10 HDR10</value>
 	</variable>
 	<variable name="VS10ModeDVVar">
-		<value condition="String.IsEqual(Player.Process(amlogic.vs10.mode),Dolby Vision) + !String.IsEqual(Player.Process(video.hdr.type),Dolby Vision)">[COLOR lightgreen]VS10 Dolby Vision[/COLOR]</value>
+		<value condition="String.IsEqual(Player.Process(amlogic.vs10.mode),Dolby Vision) + !Integer.IsEqual(Player.Process(video.source.hdr.type.raw),3)">[COLOR lightgreen]VS10 Dolby Vision[/COLOR]</value>
 		<value>VS10 Dolby Vision</value>
 	</variable>
     <variable name="AudioLayoutVar">
@@ -1071,9 +1059,9 @@
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,3)">FL, FR, LFE</value>
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,4)">FL, FR, BL, BR</value>
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,5)">FL, FR, FC, SL, SR</value>
-        <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,6)">FL, FR, FC, SL, SR, LFE</value>
-        <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,7)">FL, FR, FC, SL, SR, BC, LFE</value>
-        <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,8)">FL, FR, FC, SL, SR, BL, BR, LFE</value>
+        <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,6)">FL, FR, FC, LFE, SL, SR</value>
+        <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,7)">FL, FR, FC, LFE, SL, SR, BC</value>
+        <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,8)">FL, FR, FC, LFE, BL, BR, SL, SR</value>
     </variable>
 	<variable name="CodecLogoPositionLabel2Var">
 		<value condition="Skin.HasSetting(osd.usecenterCodecLogos)">$LOCALIZE[31666]</value>
@@ -1095,5 +1083,46 @@
 		<value condition="[String.Contains(Player.Process(amlogic.pixformat),12-bit) + String.Contains(Player.Process(amlogic.pixformat),YUV422)]">12-bit, YUV 4:2:2</value>
 		<value condition="[String.Contains(Player.Process(amlogic.pixformat),12-bit) + String.Contains(Player.Process(amlogic.pixformat),YUV444)]">12-bit, YUV 4:4:4</value>
 		<value>$INFO[Player.Process(amlogic.pixformat)]</value>
+	</variable>
+	<variable name="OSDHDRTypeVar">
+		<value condition="String.IsEqual(Player.Process(video.hdr.type),Dolby Vision)">Dolby Vision$VAR[DVProfileExtVar, P]$VAR[DVELVar, ]</value>
+		<value>$INFO[Player.Process(video.hdr.type)]</value>
+	</variable>
+	<variable name="OSDAudioOutputVar">
+		<value condition="Player.Passthrough">Passthrough</value>
+		<value>Decoded</value>
+	</variable>
+	<variable name="OSDVS10ModeVar">
+		<value condition="String.IsEqual(Player.Process(amlogic.vs10.mode),SDR)">VS10 Mode: SDR</value>
+		<value condition="String.IsEqual(Player.Process(amlogic.vs10.mode),HDR10)">VS10 Mode: HDR10</value>
+		<value condition="String.IsEqual(Player.Process(amlogic.vs10.mode),Dolby Vision) + !Integer.IsEqual(Player.Process(video.source.hdr.type.raw),3)">VS10 Mode: Dolby Vision</value>
+		<value>VS10 Mode</value>
+	</variable>
+	<variable name="OSDSubtitleVar">
+		<value condition="VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled">Subtitle: $INFO[VideoPlayer.SubtitlesLanguage,, | ]$VAR[SubtitleVar]</value>
+		<value>Subtitle</value>
+	</variable>
+	<variable name="OSDHelpTextDynamicVar">
+		<value condition="Control.HasFocus(87) + !Player.Paused">$LOCALIZE[31054]</value>
+		<value condition="Control.HasFocus(87) + [Player.Paused + Window.IsVisible(videoosd)]">$LOCALIZE[31055]</value>
+		<value condition="Control.HasFocus(608)+ PVR.IsRecordingPlayingChannel">$LOCALIZE[19059]</value>
+		<value condition="Control.HasFocus(608)">$LOCALIZE[264]</value>
+		<value condition="Control.HasFocus(804)">$LOCALIZE[33061]</value>
+		<value condition="Control.HasFocus(70011)">Player Process Info: $INFO[Player.Process(video.width.raw)]x$INFO[Player.Process(video.height.raw)]$INFO[Player.Process(videoscantype)] @ $INFO[Player.Process(videofps)]$VAR[VideoCodecPlayVar, | ]$VAR[OSDHDRTypeVar, ]$VAR[AudioCodecPlayVar, | ]$VAR[AudioChannelsPlayVar, ]$VAR[ObjectAudioPlayVar, [COLOR lightgreen],[/COLOR]]</value>
+		<value condition="Control.HasFocus(70012)">Player Debug: $INFO[Player.Process(videodecoder),[UPPERCASE],[/UPPERCASE]]$VAR[VideoHWDecoder, (,)]$INFO[VideoPlayer.VideoMibitRate, , Mb/s]$INFO[Player.Process(audiodecoder), | [UPPERCASE],[/UPPERCASE]]$VAR[OSDAudioOutputVar, (,)]$INFO[VideoPlayer.AudioKibitRate, , Kb/s]</value>
+		<value condition="Control.HasFocus(70013)">$VAR[OSDVS10ModeVar]</value>
+		<value condition="Control.HasFocus(70040)">$LOCALIZE[19019]</value>
+		<value condition="Control.HasFocus(70041)">$LOCALIZE[19069]</value>
+		<value condition="Control.HasFocus(70042)">$LOCALIZE[31065]</value>
+		<value condition="Control.HasFocus(70043)">Info: $INFO[Player.Filename]</value>
+		<value condition="Control.HasFocus(70044)">Bookmarks: Progress$INFO[Player.Progress, ,%]</value>
+		<value condition="Control.HasFocus(70045)">$LOCALIZE[31106]</value>
+		<value condition="Control.HasFocus(70046)">$VAR[OSDSubtitleVar]</value>
+		<value condition="Control.HasFocus(70047)">$LOCALIZE[36501]</value>
+		<value condition="Control.HasFocus(70048)">Settings: Volume $INFO[Player.Volume] | Audio Delay $INFO[Player.AudioDelay] | Subtitle Delay $INFO[Player.SubtitleDelay]</value>
+	</variable>
+	<variable name="OSDHelpTextVideoVar">
+		<value condition="Skin.HasSetting(OSDVideoStaticLabel)">$VAR[OSDHelpTextVar]</value>
+		<value>$VAR[OSDHelpTextDynamicVar]</value>
 	</variable>
 </includes>

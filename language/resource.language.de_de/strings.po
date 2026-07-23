@@ -765,6 +765,16 @@ msgstr "System"
 #~ msgstr "Player-Informationen"
 
 #: /xml/SkinSettings.xml
+msgctxt "#31662"
+msgid "Show RAM usage in top bar"
+msgstr "RAM-Auslastung in der oberen Leiste anzeigen"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31663"
+msgid "Show CPU temp and RAM usage in top bar"
+msgstr "CPU-Temperatur und RAM-Auslastung in der oberen Leiste anzeigen"
+
+#: /xml/SkinSettings.xml
 msgctxt "#31664"
 msgid "Show codec logos when video starts"
 msgstr "Codec-Logos beim Videostart anzeigen"
@@ -818,3 +828,8 @@ msgstr "Fortschrittsanzeige bei Pause ausblenden"
 msgctxt "#31674"
 msgid "Hide progress bar on seek"
 msgstr "Fortschrittsanzeige beim Suchen ausblenden"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31675"
+msgid "Dynamic video OSD icon labels"
+msgstr "Dynamische Video-OSD-Symbolbeschriftungen"

@@ -1,3 +1,12 @@
+[B]8.8.16[/B]
+• Fix overlapping DV and VS10 SDR/HDR10 codec logos
+• Enable the VS10 OSD button only when using the hardware decoder
+• Disable the VS10 OSD button when the file is HDR10+
+• Remove DV to HDR10 live switch
+• Detailed info labels for: VS10 Mode, Player Process Info, Player Debug, Information, Bookmarks, Subtitle, and Settings icons
+• Clean up PPI labels, media flags, and variables
+• Clean up skin settings and refine CPU/RAM display in the top bar
+
 [B]8.8.15[/B]
 • PlayerProcessInfo: indicate Player-Led DV (LLDV) and HDR10 in the video output info, with improved formatting
 • PlayerProcessInfo: scroll long subtitle names

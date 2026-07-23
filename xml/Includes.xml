@@ -1028,35 +1028,35 @@
 						<height>50</height>
 						<width>auto</width>
 						<aligny>center</aligny>
-						<label>Ram : $INFO[system.memory(used.percent)]</label>
+						<label>[COLOR grey]RAM : $INFO[system.memory(used.percent)][/COLOR]</label>
 						<visible>Skin.HasSetting(show_ram) + !Skin.HasSetting(show_weatherinfo)</visible>
 					</control>
 					<control type="label">
 						<height>50</height>
 						<width>auto</width>
 						<aligny>center</aligny>
-						<label>Ram : $INFO[system.memory(used.percent)]  l</label>
+						<label>[COLOR grey]RAM : $INFO[system.memory(used.percent)]  l[/COLOR]</label>
 						<visible>Skin.HasSetting(show_ram) + Skin.HasSetting(show_weatherinfo)</visible>
 					</control>
 					<control type="label">
 						<height>50</height>
 						<width>auto</width>
 						<aligny>center</aligny>
-						<label>Cpu : $INFO[System.CPUTemperature]  l  Ram : $INFO[system.memory(used.percent)]</label>
+						<label>[COLOR grey]CPU : $INFO[System.CPUTemperature]  l  RAM : $INFO[system.memory(used.percent)][/COLOR]</label>
 						<visible>Skin.HasSetting(show_cpu) + !Skin.HasSetting(show_weatherinfo)</visible>
                     </control>
 					<control type="label">
 						<height>50</height>
 						<width>auto</width>
 						<aligny>center</aligny>
-						<label>Cpu : $INFO[System.CPUTemperature]  l  Ram : $INFO[system.memory(used.percent)]  l</label>
+						<label>[COLOR grey]CPU : $INFO[System.CPUTemperature]  l  RAM : $INFO[system.memory(used.percent)]  l[/COLOR]</label>
 						<visible>Skin.HasSetting(show_cpu) + Skin.HasSetting(show_weatherinfo)</visible>
                     </control>
 					<control type="label">
 						<height>50</height>
 						<width>auto</width>
 						<aligny>center</aligny>
-						<label>  $INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
+						<label>[COLOR grey]  $INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits][/COLOR]</label>
 						<visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
 					</control>
 					<control type="image">

@@ -1430,7 +1430,7 @@
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
-						<label>Passthrough</label>
+						<label>Passthrough Bitstream</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
 						<visible>Player.Passthrough</visible>
@@ -1441,7 +1441,7 @@
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
-						<label>$INFO[Player.Process(audiochannelssink),]</label>
+						<label>$INFO[Player.Process(audiochannelssink)]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
 						<visible>!Player.Passthrough</visible>
@@ -1452,7 +1452,7 @@
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
-						<label>Decoding $VAR[|] [UPPERCASE]$INFO[Player.Process(audiodecoder)][/UPPERCASE]</label>
+						<label>Decoded PCM $VAR[|] [UPPERCASE]$INFO[Player.Process(audiodecoder)][/UPPERCASE]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
 						<visible>!Player.Passthrough + String.IsEmpty(Player.Process(audiochannelssink))</visible>
@@ -1926,8 +1926,7 @@
 					<visible>VideoPlayer.Content(livetv)</visible>
 					<onfocus>SetProperty(PlayerInfoDialogFocus,5551,Home)</onfocus>
 				</control>
-				<control type="button" id="5552"> + )
-					<visible>!String.Contains(Player.Process(amlogic.vs10.mode),SDR)</visible>
+				<control type="button" id="5552">
 					<visible>String.IsEqual(Player.Process(video.dovi.has.config),1) |
 					         String.IsEqual(Player.Process(video.dovi.has.header),1) |
 							 String.IsEqual(Player.Process(video.hdr.has.cll),1) |

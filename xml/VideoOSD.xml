@@ -27,9 +27,9 @@
 				<top>0</top>
 				<align>right</align>
 				<aligny>center</aligny>
-				<width>1000</width>
+				<width>1900</width>
 				<height>50</height>
-				<label>$VAR[OSDHelpTextVar]</label>
+				<label>$VAR[OSDHelpTextVideoVar]</label>
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="group" id="200">
@@ -159,6 +159,7 @@
 						</include>
 						<onclick>Action(Close)</onclick>
 						<onclick>ActivateWindow(1111)</onclick>
+						<visible>Player.Process(videohwdecoder) + !Integer.IsEqual(Player.Process(video.source.hdr.type.raw),2)</visible>
 					</control>
 					<control type="radiobutton" id="70011">
 						<include content="OSDButton">
