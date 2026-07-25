@@ -75,9 +75,13 @@
 		</control>
 		<control type="group" id="888">
 			<depth>DepthOSD+</depth>
-			<visible>[Skin.TimerIsRunning(codeclogos) | Skin.HasSetting(osd.codeclogospreview)] + !String.IsEqual(VideoPlayer.VideoCodec,av1)</visible>
+			<visible>Skin.TimerIsRunning(codeclogos) + !String.IsEqual(VideoPlayer.VideoCodec,av1)</visible>
+			<animation type="Visible" condition="!Skin.HasSetting(osd.nocodeclogosentryanimation)">
+				<effect type="slide" start="0,-80" end="0,0" delay="2000" time="320" tween="back"/>
+				<effect type="fade" start="0" end="100" delay="2000" time="180" tween="linear"/>
+			</animation>
 			<animation type="Hidden">
-				<effect type="fade" start="100" end="0" time="500" tween="sine"/>
+				<effect type="fade" start="100" end="0" time="50" tween="linear"/>
 			</animation>
 			<!-- Codec Logo position L/C/R. Right & center offsets differ by orientation: the vertical stack (144w) is narrower than the horizontal pair (308w). Margin 30, screen 1920. -->
 			<animation effect="slide" end="-776,0" time="0" condition="!Skin.HasSetting(osd.usecenterCodecLogos) + !Skin.HasSetting(osd.userightCodecLogos)">Conditional</animation>
@@ -228,9 +232,13 @@
 		</control>
 		<control type="group" id="777">
 			<depth>DepthOSD+</depth>
-			<visible>[Skin.TimerIsRunning(codeclogos) | Skin.HasSetting(osd.codeclogospreview)] + String.IsEqual(VideoPlayer.VideoCodec,av1)</visible>
+			<visible>Skin.TimerIsRunning(codeclogos) + String.IsEqual(VideoPlayer.VideoCodec,av1)</visible>
+			<animation type="Visible" condition="!Skin.HasSetting(osd.nocodeclogosentryanimation)">
+				<effect type="slide" start="0,-80" end="0,0" delay="2000" time="320" tween="back"/>
+				<effect type="fade" start="0" end="100" delay="2000" time="180" tween="linear"/>
+			</animation>
 			<animation type="Hidden">
-				<effect type="fade" start="100" end="0" time="500" tween="sine"/>
+				<effect type="fade" start="100" end="0" time="50" tween="linear"/>
 			</animation>
 			<!-- Codec Logo position L/C/R. Right & center offsets differ by orientation: the vertical stack (144w) is narrower than the horizontal pair (308w). Margin 30, screen 1920. -->
 			<animation effect="slide" end="-776,0" time="0" condition="!Skin.HasSetting(osd.usecenterCodecLogos) + !Skin.HasSetting(osd.userightCodecLogos)">Conditional</animation>

@@ -95,6 +95,13 @@
 					<onclick>Skin.SelectBool(31668, 31665|osd.useleftCodecLogos, 31666|osd.usecenterCodecLogos, 31667|osd.userightCodecLogos)</onclick>
 					<enable>!Skin.HasSetting(osd.hidecodecstartuplogos)</enable>
 				</control>
+				<control type="radiobutton" id="638">
+					<label>- $LOCALIZE[31678]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(osd.nocodeclogosentryanimation)</onclick>
+					<selected>!Skin.HasSetting(osd.nocodeclogosentryanimation)</selected>
+					<enable>!Skin.HasSetting(osd.hidecodecstartuplogos)</enable>
+				</control>
 				<control type="radiobutton" id="633">
 					<label>- $LOCALIZE[31672]</label>
 					<include>DefaultSettingButton</include>

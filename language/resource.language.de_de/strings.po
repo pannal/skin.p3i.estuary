@@ -843,3 +843,8 @@ msgstr "Dauer der Codec-Logos (Sekunden)"
 msgctxt "#31677"
 msgid "Default (7)"
 msgstr "Standard (7)"
+
+#: /xml/Variables.xml
+msgctxt "#31678"
+msgid "Codec logos slide-in animation"
+msgstr "Codec-Logo-Einblendanimation"
