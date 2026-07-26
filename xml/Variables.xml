@@ -1065,16 +1065,16 @@
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,8)">FL, FR, FC, LFE, BL, BR, SL, SR</value>
     </variable>
 	<variable name="CodecLogoDurationLabelVar">
-		<value condition="Integer.IsLess(Skin.Numeric(osd.codeclogoduration),1)">$LOCALIZE[31677]</value>
-		<value>$INFO[Skin.String(osd.codeclogoduration)]</value>
+		<value condition="Integer.IsLess(Skin.Numeric(codeclogo.duration),1)">$LOCALIZE[31677]</value>
+		<value>$INFO[Skin.String(codeclogo.duration)]</value>
 	</variable>
-	<variable name="CodecLogoPositionLabel2Var">
-		<value condition="Skin.HasSetting(osd.usecenterCodecLogos)">$LOCALIZE[31666]</value>
-		<value condition="Skin.HasSetting(osd.userightCodecLogos)">$LOCALIZE[31667]</value>
+	<variable name="CodecLogoPositionLabelVar">
+		<value condition="Skin.HasSetting(codeclogo.center)">$LOCALIZE[31666]</value>
+		<value condition="Skin.HasSetting(codeclogo.right)">$LOCALIZE[31667]</value>
 		<value>$LOCALIZE[31665]</value>
 	</variable>
 	<variable name="CodecLogoColorVar">
-		<value condition="Skin.HasSetting(osd.codeclogolight)">codecs/</value>
+		<value condition="Skin.HasSetting(codeclogo.light)">codecs/</value>
 		<value>codecs/b_</value>
 	</variable>
 	<variable name="PixFormatVar">

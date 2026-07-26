@@ -1701,7 +1701,7 @@
 					<left>806</left>
 					<width>144</width>
 					<height>80</height>
-					<animation effect="slide" end="164,-90" time="0" condition="Skin.HasSetting(osd.codeclogoshorizontal)">Conditional</animation>
+					<animation effect="slide" end="164,-90" time="0" condition="Skin.HasSetting(codeclogo.horizontal)">Conditional</animation>
 					<visible>$PARAM[visible]</visible>
 					<texture>$VAR[CodecLogoColorVar]$PARAM[texture]</texture>
 				</control>

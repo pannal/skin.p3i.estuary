@@ -78,56 +78,56 @@
 				<control type="radiobutton" id="629">
 					<label>$LOCALIZE[31664]</label>
 					<include>DefaultSettingButton</include>
-					<onclick>Skin.ToggleSetting(osd.hidecodecstartuplogos)</onclick>
-					<selected>!Skin.HasSetting(osd.hidecodecstartuplogos)</selected>
+					<onclick>Skin.ToggleSetting(codeclogo.hide)</onclick>
+					<selected>!Skin.HasSetting(codeclogo.hide)</selected>
 				</control>
 				<control type="button" id="637">
 					<label>- $LOCALIZE[31676]</label>
 					<label2>$VAR[CodecLogoDurationLabelVar]</label2>
 					<include>DefaultSettingButton</include>
-					<onclick>Skin.SetNumeric(osd.codeclogoduration)</onclick>
-					<enable>!Skin.HasSetting(osd.hidecodecstartuplogos)</enable>
+					<onclick>Skin.SetNumeric(codeclogo.duration)</onclick>
+					<enable>!Skin.HasSetting(codeclogo.hide)</enable>
 				</control>
 				<control type="button" id="628">
 					<label>- $LOCALIZE[31668]</label>
-					<label2>$VAR[CodecLogoPositionLabel2Var]</label2>
+					<label2>$VAR[CodecLogoPositionLabelVar]</label2>
 					<include>DefaultSettingButton</include>
-					<onclick>Skin.SelectBool(31668, 31665|osd.useleftCodecLogos, 31666|osd.usecenterCodecLogos, 31667|osd.userightCodecLogos)</onclick>
-					<enable>!Skin.HasSetting(osd.hidecodecstartuplogos)</enable>
+					<onclick>Skin.SelectBool(31668, 31665|codeclogo.left, 31666|codeclogo.center, 31667|codeclogo.right)</onclick>
+					<enable>!Skin.HasSetting(codeclogo.hide)</enable>
 				</control>
 				<control type="radiobutton" id="638">
 					<label>- $LOCALIZE[31678]</label>
 					<include>DefaultSettingButton</include>
-					<onclick>Skin.ToggleSetting(osd.nocodeclogosentryanimation)</onclick>
-					<selected>!Skin.HasSetting(osd.nocodeclogosentryanimation)</selected>
-					<enable>!Skin.HasSetting(osd.hidecodecstartuplogos)</enable>
+					<onclick>Skin.ToggleSetting(codeclogo.noentryanimation)</onclick>
+					<selected>!Skin.HasSetting(codeclogo.noentryanimation)</selected>
+					<enable>!Skin.HasSetting(codeclogo.hide)</enable>
 				</control>
 				<control type="radiobutton" id="633">
 					<label>- $LOCALIZE[31672]</label>
 					<include>DefaultSettingButton</include>
-					<onclick>Skin.ToggleSetting(osd.codeclogolight)</onclick>
-					<selected>!Skin.HasSetting(osd.codeclogolight)</selected>
-					<enable>!Skin.HasSetting(osd.hidecodecstartuplogos)</enable>
+					<onclick>Skin.ToggleSetting(codeclogo.light)</onclick>
+					<selected>!Skin.HasSetting(codeclogo.light)</selected>
+					<enable>!Skin.HasSetting(codeclogo.hide)</enable>
 				</control>
 				<control type="radiobutton" id="631">
 					<label>- $LOCALIZE[31670]</label>
 					<include>DefaultSettingButton</include>
-					<onclick>Skin.ToggleSetting(osd.codeclogoshorizontal)</onclick>
-					<selected>!Skin.HasSetting(osd.codeclogoshorizontal)</selected>
-					<enable>!Skin.HasSetting(osd.hidecodecstartuplogos)</enable>
+					<onclick>Skin.ToggleSetting(codeclogo.horizontal)</onclick>
+					<selected>!Skin.HasSetting(codeclogo.horizontal)</selected>
+					<enable>!Skin.HasSetting(codeclogo.hide)</enable>
 				</control>
 				<control type="radiobutton" id="632">
 					<label>- $LOCALIZE[31671]</label>
 					<include>DefaultSettingButton</include>
-					<onclick>Skin.ToggleSetting(osd.codeclogosactiveareaoff)</onclick>
-					<selected>!Skin.HasSetting(osd.codeclogosactiveareaoff)</selected>
-					<enable>!Skin.HasSetting(osd.hidecodecstartuplogos)</enable>
+					<onclick>Skin.ToggleSetting(codeclogo.activeareaoff)</onclick>
+					<selected>!Skin.HasSetting(codeclogo.activeareaoff)</selected>
+					<enable>!Skin.HasSetting(codeclogo.hide)</enable>
 				</control>
 				<control type="radiobutton" id="630">
 					<label>- $LOCALIZE[31669]</label>
 					<include>DefaultSettingButton</include>
-					<onclick>Skin.ToggleSetting(osd.codeclogospreview)</onclick>
-					<selected>Skin.HasSetting(osd.codeclogospreview)</selected>
+					<onclick>Skin.ToggleSetting(codeclogo.preview)</onclick>
+					<selected>Skin.HasSetting(codeclogo.preview)</selected>
 				</control>
 				<control type="button" id="706">
 					<label>$LOCALIZE[31024]</label>

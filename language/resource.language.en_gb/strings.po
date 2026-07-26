@@ -1005,7 +1005,7 @@ msgctxt "#31677"
 msgid "Default (7)"
 msgstr ""
 
-#: /xml/Variables.xml
+#: /xml/SkinSettings.xml
 msgctxt "#31678"
 msgid "Codec logos slide-in animation"
 msgstr ""

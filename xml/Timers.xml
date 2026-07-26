@@ -16,12 +16,12 @@
         <stop>Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(1109_topbaroverlay),5) | Player.Playing</stop>
     </timer>
     <!-- Visibility driver: decides WHEN the logos are shown (duration, or continuous preview)
-         DV property publisher: skin.codeclogosonscreen tracks whether a codec-logo is on screen -->
+         DV property publisher: skin.codeclogosonscreen tracks whether codec logos are on screen -->
     <timer>
         <name>codeclogos</name>
         <description>Shows the codec startup logos when fullscreen video starts. Publishes skin.codeclogosonscreen while a codec-logo is on screen</description>
-        <start>Window.IsActive(fullscreenvideo) + [!Skin.HasSetting(osd.hidecodecstartuplogos) | Skin.HasSetting(osd.codeclogospreview)] + !String.IsEqual(window(home).Property(codeclogoslatch),1)</start>
-        <stop>!Window.IsActive(fullscreenvideo) | [!Skin.HasSetting(osd.codeclogospreview) + [Integer.IsLess(Skin.Numeric(osd.codeclogoduration),1) + Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(codeclogos),7) | Integer.IsGreaterOrEqual(Skin.Numeric(osd.codeclogoduration),1) + Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(codeclogos),Skin.Numeric(osd.codeclogoduration))]]</stop>
+        <start>Window.IsActive(fullscreenvideo) + [!Skin.HasSetting(codeclogo.hide) | Skin.HasSetting(codeclogo.preview)] + !String.IsEqual(window(home).Property(codeclogoslatch),1)</start>
+        <stop>!Window.IsActive(fullscreenvideo) | [!Skin.HasSetting(codeclogo.preview) + [Integer.IsLess(Skin.Numeric(codeclogo.duration),1) + Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(codeclogos),7) | Integer.IsGreaterOrEqual(Skin.Numeric(codeclogo.duration),1) + Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(codeclogos),Skin.Numeric(codeclogo.duration))]]</stop>
         <onstart>SetProperty(codeclogoslatch,1,home)</onstart>
         <onstart>SetProperty(skin.codeclogosonscreen,1,home)</onstart>
         <onstop>SetProperty(skin.codeclogosonscreen,0,home)</onstop>
