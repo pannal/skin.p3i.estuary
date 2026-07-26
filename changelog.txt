@@ -1,3 +1,11 @@
+[B]8.8.17[/B]
+• Fix unclosed [ and remove orphaned )
+• Remove VS10 SDR gate that prevents DV → VS10 SDR and HDR → VS10 SDR from displaying their original DV/HDR information in PPI
+• Show "Auto (letterbox)" in PPI as a L5 state while auto-letterbox is active
+• Rework codec logos duration with a configurable, window-driven one-shot timer, replacing av.change
+• Publish skin.codeclogososd property once at Home load to skip AVChangeExtended DV OSD fallback
+• Add a slide-in entrance animation for codec logos and a setting to disable it
+
 [B]8.8.16[/B]
 • Fix overlapping DV and VS10 SDR/HDR10 codec logos
 • Enable the VS10 OSD button only when using the hardware decoder
@@ -80,5 +88,5 @@
 [B]0.6.1[/B]
 • Updated language files from Transifex
 
-﻿[B]0.0.1[/B]
+[B]0.0.1[/B]
 • Initial commit
