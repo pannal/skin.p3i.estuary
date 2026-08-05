@@ -757,9 +757,12 @@
 		<value condition="String.IsEqual(ListItem.VideoResolution,4K)">UHD</value>
 		<value condition="String.IsEqual(ListItem.VideoResolution,8K)">UHD</value>	
 	</variable>
+	<variable name="VideoHDRAltVar">
+		<value condition="String.IsEqual(ListItem.HdrTypeAlt,hdr10plus)">HDR10+</value>
+		<value condition="String.IsEqual(ListItem.HdrTypeAlt,hlg)">HLG</value>
+	</variable>
 	<variable name="VideoHDRVar">
-		<value condition="String.IsEqual(ListItem.HdrType,dolbyvision) + [String.Contains(ListItem.FileName,HDR10P) | String.Contains(ListItem.FileName,HDR10Plus) | String.Contains(ListItem.FileName,HDR10+)]">Dolby Vision [COLOR grey]|[/COLOR] HDR10+</value>
-		<value condition="String.IsEqual(ListItem.HdrType,dolbyvision)">Dolby Vision</value>
+		<value condition="String.IsEqual(ListItem.HdrType,dolbyvision)">Dolby Vision$INFO[ListItem.DvProfile, P]$VAR[VideoHDRAltVar, [COLOR grey]|[/COLOR] ]</value>
 		<value condition="String.IsEqual(ListItem.HdrType,hdr10plus)">HDR10+</value>
 		<value condition="String.IsEqual(ListItem.HdrType,hdr10)">HDR10</value>
 		<value condition="String.IsEqual(ListItem.HdrType,hlg)">HLG</value>
