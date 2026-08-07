@@ -1452,7 +1452,7 @@
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
-						<label>Decoded PCM $VAR[|] [UPPERCASE]$INFO[Player.Process(audiodecoder)][/UPPERCASE]</label>
+						<label>Decoded PCM$INFO[Player.Process(omniphony.output), [COLOR ff404040]|[/COLOR] ]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
 						<visible>!Player.Passthrough + String.IsEmpty(Player.Process(audiochannelssink))</visible>
