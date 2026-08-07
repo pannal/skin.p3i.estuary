@@ -1058,6 +1058,7 @@
 		<value>VS10 Dolby Vision</value>
 	</variable>
     <variable name="AudioLayoutVar">
+		<value condition="!String.IsEmpty(Player.Process(omniphony.input))">$INFO[Player.Process(omniphony.input)]</value>
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,1)">Mono</value>
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,2)">FL, FR</value>
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,3)">FL, FR, LFE</value>
@@ -1132,5 +1133,10 @@
 	<variable name="OSDHelpTextVideoVar">
 		<value condition="Skin.HasSetting(OSDVideoStaticLabel)">$VAR[OSDHelpTextVar]</value>
 		<value>$VAR[OSDHelpTextDynamicVar]</value>
+	</variable>
+	<variable name="AudioOutputVar">
+		<value condition="String.StartsWith(Player.Process(audiodecoder),om)">Omniphony Binaural$INFO[Player.Process(omniphony.sofa), [COLOR dimgrey](,)[/COLOR]]</value>
+		<value condition="String.StartsWith(Player.Process(audiodecoder),pt)">Passthrough Bitstream</value>
+		<value condition="String.StartsWith(Player.Process(audiodecoder),ff)">Decoded PCM</value>
 	</variable>
 </includes>
