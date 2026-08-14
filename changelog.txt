@@ -1,3 +1,7 @@
+[B]8.8.18[/B]
+• Rename skin setting identifiers and some typo clean up (Codec Logos settings will reset to default)
+• Media flags: show Dolby Vision profile and second HDR type (Needs a rescan of the library)
+
 [B]8.8.17[/B]
 • Fix unclosed [ and remove orphaned )
 • Remove VS10 SDR gate that prevents DV → VS10 SDR and HDR → VS10 SDR from displaying their original DV/HDR information in PPI
