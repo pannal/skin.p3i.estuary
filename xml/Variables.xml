@@ -813,8 +813,8 @@
 		<value condition="Integer.IsEqual(ListItem.AudioChannels,8) | Integer.IsEqual(ListItem.MusicChannels,8)">7.1</value>
 	</variable>
 	<variable name="ObjectAudioVar">
-		<value condition="String.IsEqual(ListItem.AudioCodec,eac3_ddp_atmos)">Atmos</value>
 		<value condition="String.IsEqual(ListItem.AudioCodec,truehd_atmos)">Atmos</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,eac3_ddp_atmos)">Atmos</value>
 		<value condition="String.IsEqual(ListItem.AudioCodec,dtshd_ma_x)">DTS:X</value>
 		<value condition="String.IsEqual(ListItem.AudioCodec,dtshd_ma_x_imax)">DTS:X IMAX</value>
 	</variable>
@@ -943,8 +943,8 @@
 		<value condition="Integer.IsEqual(VideoPlayer.AudioChannels,8) | Integer.IsEqual(MusicPlayer.Channels,8)">7.1</value>
 	</variable>
 	<variable name="ObjectAudioPlayVar">
-		<value condition="String.IsEqual(VideoPlayer.AudioCodec,eac3_ddp_atmos)">Atmos</value>
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,truehd_atmos)">Atmos</value>
+		<value condition="String.IsEqual(VideoPlayer.AudioCodec,eac3_ddp_atmos)">Atmos</value>
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_x)">DTS:X</value>
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_x_imax)">DTS:X IMAX</value>
 	</variable>
@@ -1067,6 +1067,7 @@
 		<value>VS10 Dolby Vision</value>
 	</variable>
     <variable name="AudioLayoutVar">
+        <value condition="player.passthrough + !String.IsEmpty(Player.Process(audio.object.layout))">$INFO[Player.Process(audio.object.layout)]</value>
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,1)">Mono</value>
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,2)">FL, FR</value>
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,3)">FL, FR, LFE</value>
