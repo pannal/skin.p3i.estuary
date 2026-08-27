@@ -810,8 +810,8 @@
 		<value condition="Integer.IsEqual(ListItem.AudioChannels,8) | Integer.IsEqual(ListItem.MusicChannels,8)">7.1</value>
 	</variable>
 	<variable name="ObjectAudioVar">
-		<value condition="String.IsEqual(ListItem.AudioCodec,eac3_ddp_atmos)">Atmos</value>
 		<value condition="String.IsEqual(ListItem.AudioCodec,truehd_atmos)">Atmos</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,eac3_ddp_atmos)">Atmos</value>
 		<value condition="String.IsEqual(ListItem.AudioCodec,dtshd_ma_x)">DTS:X</value>
 		<value condition="String.IsEqual(ListItem.AudioCodec,dtshd_ma_x_imax)">DTS:X IMAX</value>
 	</variable>
@@ -934,8 +934,9 @@
 		<value condition="Integer.IsEqual(VideoPlayer.AudioChannels,8) | Integer.IsEqual(MusicPlayer.Channels,8)">7.1</value>
 	</variable>
 	<variable name="ObjectAudioPlayVar">
-		<value condition="String.IsEqual(VideoPlayer.AudioCodec,eac3_ddp_atmos)">Atmos</value>
+		<value condition="Integer.IsGreater(Player.Process(audio.object.count),0)">Atmos$INFO[Player.Process(audio.object.count), (, obj)]</value>
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,truehd_atmos)">Atmos</value>
+		<value condition="String.IsEqual(VideoPlayer.AudioCodec,eac3_ddp_atmos)">Atmos</value>
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_x)">DTS:X</value>
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_x_imax)">DTS:X IMAX</value>
 	</variable>
