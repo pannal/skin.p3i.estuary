@@ -206,7 +206,7 @@
 			</include>
 			<include content="AudioCodecFlag">
 				<param name="groupId">80</param><param name="imageId">81</param>
-				<param name="visible">String.IsEqual(VideoPlayer.AudioCodec,dca)</param>
+				<param name="visible">String.IsEqual(VideoPlayer.AudioCodec,dca) | String.IsEqual(VideoPlayer.AudioCodec,dts_es) | String.IsEqual(VideoPlayer.AudioCodec,dts_96_24) | String.IsEqual(VideoPlayer.AudioCodec,dts_express)</param>
 				<param name="texture">dca.png</param>
 			</include>
 			<include content="AudioCodecFlag">
@@ -372,7 +372,7 @@
 			</include>
 			<include content="AudioCodecFlag">
 				<param name="groupId">80</param><param name="imageId">81</param>
-				<param name="visible">String.IsEqual(VideoPlayer.AudioCodec,dca)</param>
+				<param name="visible">String.IsEqual(VideoPlayer.AudioCodec,dca) | String.IsEqual(VideoPlayer.AudioCodec,dts_es) | String.IsEqual(VideoPlayer.AudioCodec,dts_96_24) | String.IsEqual(VideoPlayer.AudioCodec,dts_express)</param>
 				<param name="texture">dca.png</param>
 			</include>
 			<include content="AudioCodecFlag">
