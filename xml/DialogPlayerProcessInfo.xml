@@ -1430,32 +1430,9 @@
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
-						<label>Passthrough Bitstream</label>
+						<label>$VAR[AudioOutputVar]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
-						<visible>Player.Passthrough</visible>
-					</control>
-					<control type="label">
-						<left>180</left>
-						<width>420</width>
-						<height>40</height>
-						<aligny>bottom</aligny>
-						<align>left</align>
-						<label>$INFO[Player.Process(audiochannelssink)]</label>
-						<font>font12</font>
-						<shadowcolor>black</shadowcolor>
-						<visible>!Player.Passthrough</visible>
-					</control>
-					<control type="label">
-						<left>180</left>
-						<width>420</width>
-						<height>40</height>
-						<aligny>bottom</aligny>
-						<align>left</align>
-						<label>Decoded PCM $VAR[|] [UPPERCASE]$INFO[Player.Process(audiodecoder)][/UPPERCASE]</label>
-						<font>font12</font>
-						<shadowcolor>black</shadowcolor>
-						<visible>!Player.Passthrough + String.IsEmpty(Player.Process(audiochannelssink))</visible>
 					</control>
 				</control>
 				<control type="group">

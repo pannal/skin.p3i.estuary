@@ -1077,6 +1077,7 @@
 		<value>VS10 Dolby Vision</value>
 	</variable>
     <variable name="AudioLayoutVar">
+		<value condition="!String.IsEmpty(Player.Process(omniphony.input))">$INFO[Player.Process(omniphony.input)]$INFO[Player.Process(omniphony.render), [COLOR dimgrey](,)[/COLOR]]</value>
         <value condition="player.passthrough + !String.IsEmpty(Player.Process(audio.object.layout))">$INFO[Player.Process(audio.object.layout)]</value>
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,1)">Mono</value>
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,2)">FL, FR</value>
@@ -1084,7 +1085,7 @@
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,4)">FL, FR, BL, BR</value>
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,5)">FL, FR, FC, SL, SR</value>
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,6)">FL, FR, FC, LFE, SL, SR</value>
-        <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,7)">FL, FR, FC, LFE, SL, SR, BC</value>
+        <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,7)">FL, FR, FC, LFE, BC, SL, SR</value>
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,8)">FL, FR, FC, LFE, BL, BR, SL, SR</value>
     </variable>
 	<variable name="CodecLogoDurationLabelVar">
@@ -1152,5 +1153,10 @@
 	<variable name="OSDHelpTextVideoVar">
 		<value condition="Skin.HasSetting(OSDVideoStaticLabel)">$VAR[OSDHelpTextVar]</value>
 		<value>$VAR[OSDHelpTextDynamicVar]</value>
+	</variable>
+	<variable name="AudioOutputVar">
+		<value condition="String.StartsWith(Player.Process(audiodecoder),om)">Omniphony Binaural$INFO[Player.Process(omniphony.sofa), [COLOR dimgrey](,)[/COLOR]]</value>
+		<value condition="String.StartsWith(Player.Process(audiodecoder),pt)">Passthrough Bitstream</value>
+		<value condition="String.StartsWith(Player.Process(audiodecoder),ff)">Decoded PCM</value>
 	</variable>
 </includes>
