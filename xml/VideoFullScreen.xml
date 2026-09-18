@@ -229,6 +229,11 @@
 				<param name="visible">String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_x_imax)</param>
 				<param name="texture">dtshd_ma_x_imax.png</param>
 			</include>
+			<include content="AudioCodecFlag">
+				<param name="groupId">90</param><param name="imageId">91</param>
+				<param name="visible">String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_auro3d)</param>
+				<param name="texture">dtshd_ma_auro3d.png</param>
+			</include>
 		</control>
 		<control type="group" id="777">
 			<depth>DepthOSD+</depth>
@@ -394,6 +399,11 @@
 				<param name="groupId">88</param><param name="imageId">89</param>
 				<param name="visible">String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_x_imax)</param>
 				<param name="texture">dtshd_ma_x_imax.png</param>
+			</include>
+			<include content="AudioCodecFlag">
+				<param name="groupId">90</param><param name="imageId">91</param>
+				<param name="visible">String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_auro3d)</param>
+				<param name="texture">dtshd_ma_auro3d.png</param>
 			</include>
 		</control>
 	</controls>
