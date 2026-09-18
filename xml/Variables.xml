@@ -772,6 +772,7 @@
 		<value condition="String.IsEqual(ListItem.AudioCodec,truehd_atmos)">Dolby TrueHD</value>
 		<value condition="String.IsEqual(ListItem.AudioCodec,dtshd_ma_x)">DTS-HD MA</value>
 		<value condition="String.IsEqual(ListItem.AudioCodec,dtshd_ma_x_imax)">DTS-HD MA</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,dtshd_ma_auro3d)">DTS-HD MA</value>
 		<value condition="String.IsEqual(ListItem.AudioCodec,ac3)">Dolby Digital</value>
 		<value condition="String.IsEqual(ListItem.AudioCodec,dolbydigital)">Dolby Digital</value>
 		<value condition="String.IsEqual(ListItem.AudioCodec,eac3)">Dolby Digital+</value>
@@ -817,6 +818,7 @@
 		<value condition="String.IsEqual(ListItem.AudioCodec,eac3_ddp_atmos)">Atmos</value>
 		<value condition="String.IsEqual(ListItem.AudioCodec,dtshd_ma_x)">DTS:X</value>
 		<value condition="String.IsEqual(ListItem.AudioCodec,dtshd_ma_x_imax)">DTS:X IMAX</value>
+		<value condition="String.IsEqual(ListItem.AudioCodec,dtshd_ma_auro3d)">Auro-3D</value>
 	</variable>
 	<variable name="AudioLanguageVar">
 		<value condition="String.IsEqual(ListItem.AudioLanguage,und)">[COLOR grey]---[/COLOR]</value>
@@ -835,6 +837,7 @@
 		<value condition="String.IsEqual(MusicPlayer.Codec,truehd_atmos)">Dolby TrueHD</value>
 		<value condition="String.IsEqual(MusicPlayer.Codec,dtshd_ma_x)">DTS-HD MA</value>
 		<value condition="String.IsEqual(MusicPlayer.Codec,dtshd_ma_x_imax)">DTS-HD MA</value>
+		<value condition="String.IsEqual(MusicPlayer.Codec,dtshd_ma_auro3d)">DTS-HD MA</value>
 		<value condition="String.IsEqual(MusicPlayer.Codec,ac3)">Dolby Digital</value>
 		<value condition="String.IsEqual(MusicPlayer.Codec,dolbydigital)">Dolby Digital</value>
 		<value condition="String.IsEqual(MusicPlayer.Codec,eac3)">Dolby Digital+</value>
@@ -902,6 +905,7 @@
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,truehd_atmos)">Dolby TrueHD</value>
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_x)">DTS-HD MA</value>
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_x_imax)">DTS-HD MA</value>
+		<value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_auro3d)">DTS-HD MA</value>
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,ac3)">Dolby Digital</value>
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,dolbydigital)">Dolby Digital</value>
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,eac3)">Dolby Digital+</value>
@@ -947,6 +951,7 @@
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,eac3_ddp_atmos)">Atmos</value>
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_x)">DTS:X</value>
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_x_imax)">DTS:X IMAX</value>
+		<value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_auro3d)">Auro-3D</value>
 	</variable>
 	<variable name="AudioLanguagePlayVar">
 		<value condition="String.IsEqual(VideoPlayer.AudioLanguage,und)">[COLOR grey]---[/COLOR]</value>
