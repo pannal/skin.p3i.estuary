@@ -1,3 +1,10 @@
+[B]8.8.19[/B]
+• New DTS extensions: DTS-ES, DTS 96/24 and DTS Express
+• Show Atmos, DTS:X, and Auro-3D spatial layouts in PPI
+• Auro-3D codec support, including a brand new codec logo
+• Show DTS-HD HRA with DTS:X
+• Omniphony binaural for headphones
+
 [B]8.8.18[/B]
 • Rename skin setting identifiers and some typo clean up (Codec Logos settings will reset to default)
 • Media flags: show Dolby Vision profile and second HDR type (Needs a rescan of the library)
