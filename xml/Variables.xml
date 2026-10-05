@@ -992,8 +992,8 @@
 	</variable>
 	<variable name="DVSignalTypeVar">
 		<value condition="Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),1)">DV Tunnel</value>
-		<value condition="Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),0) + String.Contains(Player.Process(amlogic.eoft_gamut),DV-LL)">LLDV</value>
-		<value condition="Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),0)">HDR10</value>
+		<value condition="Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),0) + String.Contains(Player.Process(amlogic.eoft_gamut),DV-LL)">LLDV$INFO[Player.Process(video.dovi.vsvdb.max.lum),[COLOR ff404040]|[/COLOR], nits]</value>
+		<value condition="Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),0)">HDR10$INFO[Player.Process(video.dovi.vsvdb.max.lum),[COLOR ff404040]|[/COLOR], nits]</value>
 	</variable>
 	<variable name="|">
 		<value>[COLOR ff404040]|[/COLOR]</value>
