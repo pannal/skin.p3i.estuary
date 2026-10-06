@@ -161,6 +161,30 @@
 					</control>
 				</control>
 				<control type="group">
+					<!-- DV Module -->
+					<width>500</width>
+					<height>40</height>
+					<control type="label">
+						<width>200</width>
+						<height>40</height>
+						<aligny>bottom</aligny>
+						<align>left</align>
+						<label>[COLOR button_focus]Module:[/COLOR]</label>
+						<font>font12</font>
+						<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+						<left>200</left>
+						<width>300</width>
+						<height>40</height>
+						<aligny>bottom</aligny>
+						<align>left</align>
+						<label>$INFO[Player.Process(amlogic.dv.backend)]</label>
+						<font>font12</font>
+						<shadowcolor>black</shadowcolor>
+					</control>
+				</control>
+				<control type="group">
 					<!-- DV Version -->
 					<width>500</width>
 					<height>40</height>
@@ -245,7 +269,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<!-- DV RPU -->
+					<!-- DV RPU / BL / EL -->
 					<width>500</width>
 					<height>40</height>
 					<control type="label">
@@ -253,47 +277,34 @@
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
-						<label>[COLOR button_focus]RPU:[/COLOR]</label>
+						<label>[COLOR button_focus]RPU/BL/EL:[/COLOR]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
 					</control>
 					<control type="label">
 						<left>200</left>
+						<top>-1</top>
 						<width>300</width>
 						<height>40</height>
 						<aligny>center</aligny>
 						<align>left</align>
-						<label>$VAR[RPUPresentVar]</label>
+						<label>$VAR[RPUPresentVar]  $VAR[BLPresentVar]  $VAR[ELPresentVar]  $VAR[ELSourcePresentVar]</label>
 						<font>font40</font>
 						<shadowcolor>black</shadowcolor>
 					</control>
-				</control>
-				<control type="group">
-					<!-- DV BL -->
-					<width>500</width>
-					<height>40</height>
 					<control type="label">
+						<left>265</left>
 						<width>300</width>
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
-						<label>[COLOR button_focus]BL:[/COLOR]</label>
+						<label>$VAR[DVELVar]  $VAR[DVSourceELVar]</label>
 						<font>font12</font>
-						<shadowcolor>black</shadowcolor>
-					</control>
-					<control type="label">
-						<left>200</left>
-						<width>300</width>
-						<height>40</height>
-						<aligny>center</aligny>
-						<align>left</align>
-						<label>$VAR[BLPresentVar]</label>
-						<font>font40</font>
 						<shadowcolor>black</shadowcolor>
 					</control>
 				</control>
 				<control type="group">
-					<!-- DV EL -->
+					<!-- DV Layout -->
 					<width>500</width>
 					<height>40</height>
 					<control type="label">
@@ -301,7 +312,7 @@
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
-						<label>[COLOR button_focus]EL:[/COLOR]</label>
+						<label>[COLOR button_focus]Layout:[/COLOR]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
 					</control>
@@ -311,43 +322,9 @@
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
-						<label>$VAR[DVELVar]</label>
+						<label>$VAR[DVLayoutVar]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
-					</control>
-					<control type="label">
-						<left>200</left>
-						<width>300</width>
-						<height>40</height>
-						<aligny>center</aligny>
-						<align>left</align>
-						<label>$VAR[ELPresentVar]</label>
-						<font>font40</font>
-						<shadowcolor>black</shadowcolor>
-					</control>
-					<control type="label">
-						<left>250</left>
-						<width>50</width>
-						<height>40</height>
-						<aligny>bottom</aligny>
-						<align>left</align>
-						<label>$VAR[DVSourceELVar]</label>
-						<font>font12</font>
-						<shadowcolor>black</shadowcolor>
-						<visible>!String.IsEqual(Player.Process(video.source.dovi.el.type),Player.Process(video.dovi.el.type))</visible>
-						<visible>!String.IsEqual(Player.Process(video.source.dovi.profile),0)</visible>
-					</control>
-					<control type="label">
-						<left>250</left>
-						<width>50</width>
-						<height>40</height>
-						<aligny>center</aligny>
-						<align>left</align>
-						<label>$VAR[ELSourcePresentVar]</label>
-						<font>font40</font>
-						<shadowcolor>black</shadowcolor>
-						<visible>!String.IsEqual(Player.Process(video.source.dovi.el.present),Player.Process(video.dovi.el.present))</visible>
-						<visible>!String.IsEqual(Player.Process(video.source.dovi.profile),0)</visible>
 					</control>
 				</control>
 				<control type="group">
@@ -1568,7 +1545,7 @@
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
-						<label>$VAR[DVProfileExtVar]$VAR[DVELVar, ] $INFO[Player.Process(video.dovi.codec.string),[COLOR dimgrey](,)[/COLOR]]</label>
+						<label>$VAR[DVProfileExtVar]$VAR[DVELVar, ]$INFO[Player.Process(video.dovi.codec.string), [COLOR dimgrey](,)[/COLOR]]$VAR[DVModuleVar, [COLOR dimgrey]- ,[/COLOR]]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
 						<visible>!String.IsEqual(VideoPlayer.VideoCodec,av1)</visible>

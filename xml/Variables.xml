@@ -967,8 +967,8 @@
 		<value condition="String.IsEqual(Player.Process(video.dovi.el.type),full)">[COLOR lightgreen]FEL[/COLOR]</value>
 	</variable>
 	<variable name="DVSourceELVar">
-		<value condition="String.IsEqual(Player.Process(video.source.dovi.el.type),minimum)">[COLOR 8016a34a]MEL[/COLOR]</value>
-		<value condition="String.IsEqual(Player.Process(video.source.dovi.el.type),full)">[COLOR 8016a34a]FEL[/COLOR]</value>
+		<value condition="!Integer.IsEqual(Player.Process(video.source.dovi.profile),0) + !String.IsEqual(Player.Process(video.source.dovi.el.type),Player.Process(video.dovi.el.type)) + String.IsEqual(Player.Process(video.source.dovi.el.type),minimum)">[COLOR 8016a34a]MEL[/COLOR]</value>
+		<value condition="!Integer.IsEqual(Player.Process(video.source.dovi.profile),0) + !String.IsEqual(Player.Process(video.source.dovi.el.type),Player.Process(video.dovi.el.type)) + String.IsEqual(Player.Process(video.source.dovi.el.type),full)">[COLOR 8016a34a]FEL[/COLOR]</value>
 	</variable>
 	<variable name="RPUPresentVar">
 		<value condition="Integer.IsEqual(Player.Process(video.dovi.rpu.present),1)">[COLOR lightgreen]■[/COLOR]</value>
@@ -982,7 +982,7 @@
 		<value condition="Integer.IsEqual(Player.Process(video.dovi.el.present),0)">[COLOR ff424242]■[/COLOR]</value>
 	</variable>
 	<variable name="ELSourcePresentVar">
-		<value condition="Integer.IsEqual(Player.Process(video.source.dovi.el.present),0)">[COLOR ff424242]■[/COLOR]</value>
+		<value condition="!Integer.IsEqual(Player.Process(video.source.dovi.profile),0) + !Integer.IsEqual(Player.Process(video.source.dovi.el.present),Player.Process(video.dovi.el.present)) + Integer.IsEqual(Player.Process(video.source.dovi.el.present),0)">[COLOR ff424242]■[/COLOR]</value>
 	</variable>
 	<variable name="DVProfileExtVar">
 		<value>$INFO[Player.Process(video.dovi.profile)].$INFO[Player.Process(video.dovi.bl.signal.compatibility)]</value>
@@ -1158,5 +1158,13 @@
 		<value condition="String.StartsWith(Player.Process(audiodecoder),om)">Omniphony Binaural$INFO[Player.Process(omniphony.sofa), [COLOR dimgrey](,)[/COLOR]]</value>
 		<value condition="String.StartsWith(Player.Process(audiodecoder),pt)">Passthrough Bitstream</value>
 		<value condition="String.StartsWith(Player.Process(audiodecoder),ff)">Decoded PCM</value>
+	</variable>
+	<variable name="DVLayoutVar">
+		<value condition="!String.IsEmpty(Player.Process(video.dovi.dual.track))">$INFO[Player.Process(video.dovi.dual.track)]</value>
+		<value condition="Integer.IsEqual(Player.Process(video.dovi.el.present),0)">Single-layer</value>
+		<value>[COLOR dimgrey]Unknown[/COLOR]</value>
+	</variable>
+	<variable name="DVModuleVar">
+		<value condition="String.IsEqual(Player.Process(amlogic.dv.backend),dovi5)">dovi5</value>
 	</variable>
 </includes>
