@@ -1,3 +1,9 @@
+[B]8.8.20[/B]
+• Show max target luminance for player-led DV in PPI
+• Use bullet (U+2022) instead of math dot as UI separator
+• Show active DV module and DV stream layout in PPI
+• Show lowest fps prefix and unit only when the value is present in PPI
+
 [B]8.8.19[/B]
 • New DTS extensions: DTS-ES, DTS 96/24 and DTS Express
 • Show Atmos, DTS:X, and Auro-3D spatial layouts in PPI
