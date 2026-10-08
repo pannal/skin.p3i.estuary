@@ -1667,7 +1667,7 @@
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
-						<label>&gt; $INFO[Player.Process(amlogic.video.fps.drop)] fps</label>
+						<label>$INFO[Player.Process(amlogic.video.fps.drop),> , fps]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
 					</control>
