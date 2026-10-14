@@ -1032,8 +1032,8 @@
 		<value condition="Integer.IsLess(Player.Process(video.dovi.level),10)">0</value>
 	</variable>
 	<variable name="VPModeVar">
-		<value condition="Integer.IsEqual(Player.Process(video.vpmode),1)">[COLOR lightgreen]■[/COLOR]</value>
-		<value>[COLOR ff424242]■[/COLOR]</value>
+		<value condition="Integer.IsEqual(Player.Process(video.vpmode),1)">Enabled</value>
+		<value>Disabled</value>
 	</variable>
 	<variable name="DualTrackVar">
 		<value condition="String.IsEqual(Player.Process(video.dovi.dual.track),ST-DL) + String.IsEqual(Player.Process(video.source.hdr.type),Dolby Vision)">ST-DL</value>
@@ -1166,5 +1166,9 @@
 	</variable>
 	<variable name="DVModuleVar">
 		<value condition="String.IsEqual(Player.Process(amlogic.dv.backend),dovi5)">dovi5</value>
+	</variable>
+	<variable name="ActiveBordersVar">
+		<value condition="String.IsEqual(Player.Process(video.borders.detected),1)">$INFO[Player.Process(video.borders.left.offset)] [COLOR dimgrey]L[/COLOR] $VAR[|] $INFO[Player.Process(video.borders.right.offset)] [COLOR dimgrey]R[/COLOR] $VAR[|] $INFO[Player.Process(video.borders.top.offset)] [COLOR dimgrey]T[/COLOR] $VAR[|] $INFO[Player.Process(video.borders.bottom.offset)] [COLOR dimgrey]B[/COLOR]</value>
+		<value>Unavailable</value>
 	</variable>
 </includes>

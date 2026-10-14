@@ -8,13 +8,13 @@
 	<controls>
 		<control type="group">
 			<bottom>0</bottom>
-			<height>300</height>
+			<height>340</height>
 			<animation effect="slide" end="0,-20" time="150" condition="VideoPlayer.Content(LiveTV)">conditional</animation>
 			<control type="image">
 				<left>30</left>
 				<top>-260</top>
 				<right>30</right>
-				<height>420</height>
+				<height>460</height>
 				<texture border="40">dialogs/dialog-bg-nobo.png</texture>
 			</control>
 			<!-- PVR Left -->
@@ -1108,7 +1108,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<!-- Video decoder|deinterlacing -->
+					<!-- Video decoder -->
 					<width>600</width>
 					<height>40</height>
 					<control type="label">
@@ -1116,7 +1116,7 @@
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
-						<label>[COLOR button_focus]- dec|deint:[/COLOR]</label>
+						<label>[COLOR button_focus]- decoder:[/COLOR]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
 					</control>
@@ -1126,7 +1126,31 @@
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
-						<label>$INFO[Player.Process(videodecoder),[UPPERCASE],[/UPPERCASE]] $VAR[VideoHWDecoder,[COLOR dimgrey]([/COLOR],[COLOR dimgrey])[/COLOR]] $VAR[|] [CAPITALIZE]$INFO[Player.Process(deintmethod)][/CAPITALIZE]</label>
+						<label>$INFO[Player.Process(videodecoder),[UPPERCASE],[/UPPERCASE]] $VAR[VideoHWDecoder,[COLOR dimgrey]([/COLOR],[COLOR dimgrey])[/COLOR]]</label>
+						<font>font12</font>
+						<shadowcolor>black</shadowcolor>
+					</control>
+				</control>
+				<control type="group">
+					<!-- Video deinterlacing -->
+					<width>600</width>
+					<height>40</height>
+					<control type="label">
+						<width>180</width>
+						<height>40</height>
+						<aligny>bottom</aligny>
+						<align>left</align>
+						<label>[COLOR button_focus]- deint:[/COLOR]</label>
+						<font>font12</font>
+						<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+						<left>180</left>
+						<width>420</width>
+						<height>40</height>
+						<aligny>bottom</aligny>
+						<align>left</align>
+						<label>[CAPITALIZE]$INFO[Player.Process(deintmethod)][/CAPITALIZE]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
 					</control>
@@ -1181,7 +1205,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<!-- CPU -->
+					<!-- Active borders -->
 					<width>600</width>
 					<height>40</height>
 					<control type="label">
@@ -1189,7 +1213,7 @@
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
-						<label>[COLOR button_focus]CPU:[/COLOR]</label>
+						<label>[COLOR button_focus]- borders:[/COLOR]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
 					</control>
@@ -1199,22 +1223,21 @@
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
-						<label>$INFO[System.CpuFrequency] $VAR[|] $INFO[System.CPUTemperature]</label>
+						<label>$VAR[ActiveBordersVar]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
 					</control>
 				</control>
-				<control type="group">
-					<!-- CPU usage -->
+                <control type="group">
+					<!-- Memory -->
 					<width>600</width>
 					<height>46</height>
-					<visible>System.SupportsCPUUsage</visible>
 					<control type="label">
 						<width>180</width>
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
-						<label>[COLOR button_focus]- usage:[/COLOR]</label>
+						<label>[COLOR button_focus]Memory:[/COLOR]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
 					</control>
@@ -1224,17 +1247,16 @@
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
-						<label>$INFO[System.CpuAltUsage]</label>
+						<label>$INFO[system.memory(used.percent)] [COLOR dimgrey]([/COLOR]$INFO[system.memory(used)] [COLOR dimgrey]/[/COLOR] $INFO[system.memory(total)][COLOR dimgrey])[/COLOR]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
 					</control>
 				</control>
 				<control type="progress">
-					<description>CPU BAR</description>
+					<description>RAM BAR</description>
 					<width>600</width>
 					<height>8</height>
-					<info>System.CPUUsage</info>
-					<visible>System.SupportsCPUUsage</visible>
+					<info>system.memory(used)</info>
 					<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
 					<midtexture border="3" colordiffuse="button_focus">colors/white.png</midtexture>
 				</control>
@@ -1304,7 +1326,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<!-- Audio sampling -->
+					<!-- Audio sample -->
 					<width>600</width>
 					<height>40</height>
 					<control type="label">
@@ -1312,7 +1334,7 @@
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
-						<label>[COLOR button_focus]- sampling:[/COLOR]</label>
+						<label>[COLOR button_focus]- sample:[/COLOR]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
 					</control>
@@ -1485,16 +1507,16 @@
 						<visible>!VideoPlayer.HasSubtitles</visible>
 					</control>
 				</control>
-                <control type="group">
-					<!-- Memory -->
+				<control type="group">
+					<!-- CPU -->
 					<width>600</width>
-					<height>46</height>
+					<height>40</height>
 					<control type="label">
 						<width>180</width>
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
-						<label>[COLOR button_focus]Memory:[/COLOR]</label>
+						<label>[COLOR button_focus]CPU:[/COLOR]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
 					</control>
@@ -1504,16 +1526,42 @@
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
-						<label>$INFO[system.memory(used.percent)] [COLOR dimgrey]([/COLOR]$INFO[system.memory(used)] [COLOR dimgrey]/[/COLOR] $INFO[system.memory(total)][COLOR dimgrey])[/COLOR]</label>
+						<label>$INFO[System.CpuFrequency] $VAR[|] $INFO[System.CPUTemperature]</label>
+						<font>font12</font>
+						<shadowcolor>black</shadowcolor>
+					</control>
+				</control>
+				<control type="group">
+					<!-- CPU usage -->
+					<width>600</width>
+					<height>46</height>
+					<visible>System.SupportsCPUUsage</visible>
+					<control type="label">
+						<width>180</width>
+						<height>40</height>
+						<aligny>bottom</aligny>
+						<align>left</align>
+						<label>[COLOR button_focus]- usage:[/COLOR]</label>
+						<font>font12</font>
+						<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+						<left>180</left>
+						<width>420</width>
+						<height>40</height>
+						<aligny>bottom</aligny>
+						<align>left</align>
+						<label>$INFO[System.CpuAltUsage]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
 					</control>
 				</control>
 				<control type="progress">
-					<description>RAM BAR</description>
+					<description>CPU BAR</description>
 					<width>600</width>
 					<height>8</height>
-					<info>system.memory(used)</info>
+					<info>System.CPUUsage</info>
+					<visible>System.SupportsCPUUsage</visible>
 					<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
 					<midtexture border="3" colordiffuse="button_focus">colors/white.png</midtexture>
 				</control>
@@ -1602,7 +1650,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<!-- VP|VS10 mode -->
+					<!-- VS10 mode -->
 					<width>540</width>
 					<height>40</height>
 					<visible>Player.HasVideo</visible>
@@ -1611,7 +1659,7 @@
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
-						<label>[COLOR button_focus]VP|VS10 mode:[/COLOR]</label>
+						<label>[COLOR button_focus]VS10 mode:[/COLOR]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
 					</control>
@@ -1619,19 +1667,34 @@
 						<left>200</left>
 						<width>340</width>
 						<height>40</height>
-						<aligny>center</aligny>
+						<aligny>bottom</aligny>
 						<align>left</align>
-						<label>$VAR[VPModeVar]</label>
-						<font>font40</font>
+						<label>$INFO[Player.Process(amlogic.vs10.mode)]</label>
+						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
 					</control>
+				</control>
+				<control type="group">
+					<!-- VP mode -->
+					<width>540</width>
+					<height>40</height>
+					<visible>Player.HasVideo</visible>
 					<control type="label">
-						<left>225</left>
-						<width>315</width>
+						<width>200</width>
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
-						<label> $VAR[|] $INFO[Player.Process(amlogic.vs10.mode)]</label>
+						<label>[COLOR button_focus]VP mode:[/COLOR]</label>
+						<font>font12</font>
+						<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+						<left>200</left>
+						<width>340</width>
+						<height>40</height>
+						<aligny>bottom</aligny>
+						<align>left</align>
+						<label>$VAR[VPModeVar]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
 					</control>
@@ -1678,7 +1741,7 @@
 					<height>40</height>
 					<control type="label">
 						<width>200</width>
-						<height>18</height>
+						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
 						<label>[COLOR button_focus]Audio queue:[/COLOR]</label>
@@ -1795,7 +1858,7 @@
 					<height>40</height>
 					<control type="label">
 						<width>200</width>
-						<height>18</height>
+						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
 						<label>[COLOR button_focus]Video data:[/COLOR]</label>
