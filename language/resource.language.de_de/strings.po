@@ -848,8 +848,3 @@ msgstr "Standard (7)"
 msgctxt "#31678"
 msgid "Codec logos slide-in animation"
 msgstr "Codec-Logo-Einblendanimation"
-
-#: /xml/Variables.xml
-msgctxt "#31679"
-msgid "Skipped [COLOR dimgrey](VAR)[/COLOR]"
-msgstr "Übersprungen [COLOR dimgrey](VAR)[/COLOR]"

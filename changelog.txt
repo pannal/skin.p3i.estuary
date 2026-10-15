@@ -1,3 +1,6 @@
+[B]8.8.22[/B]
+• Keep the Skipped (VAR) detection status untranslated.
+
 [B]8.8.21[/B]
 • Show VAR instead of IMAX when DV active-area detection cannot establish consistent framing.
 • Keep border-detection startup progress visible during fullscreen playback and in the information view.

@@ -1054,7 +1054,7 @@
 		<value condition="Integer.IsEqual(Player.Process(video.dovi.l5.auto),1)">Auto [COLOR dimgrey](letterbox)[/COLOR]</value>
 		<value condition="Integer.IsEqual(Player.Process(video.dovi.l5.detect.state),0)">Failed</value>
 		<value condition="Integer.IsEqual(Player.Process(video.dovi.l5.detect.state),1)">Skipped [COLOR dimgrey](non-16:9)[/COLOR]</value>
-		<value condition="Integer.IsEqual(Player.Process(video.dovi.l5.detect.state),2)">$LOCALIZE[31679]</value>
+		<value condition="Integer.IsEqual(Player.Process(video.dovi.l5.detect.state),2)">Skipped [COLOR dimgrey](VAR)[/COLOR]</value>
 		<value condition="Integer.IsEqual(Player.Process(video.dovi.l5.detect.state),3)">Detected</value>
 		<value condition="Integer.IsEqual(Player.Process(video.dovi.l5.detect.state),4)">Skipped</value>
 		<value condition="Integer.IsEqual(Player.Process(video.dovi.l5.detect.state),5)">Disabled</value>
