@@ -1155,7 +1155,7 @@
 		<value>$VAR[OSDHelpTextDynamicVar]</value>
 	</variable>
 	<variable name="AudioOutputVar">
-		<value condition="String.StartsWith(Player.Process(audiodecoder),om)">Omniphony Binaural$INFO[Player.Process(omniphony.sofa), [COLOR dimgrey](,)[/COLOR]]</value>
+		<value condition="String.StartsWith(Player.Process(audiodecoder),om)">Omniphony$INFO[Player.Process(omniphony.sofa), [COLOR dimgrey](,)[/COLOR]]$INFO[Player.Process(omniphony.config), [COLOR dimgrey]- ,[/COLOR]]</value>
 		<value condition="String.StartsWith(Player.Process(audiodecoder),pt)">Passthrough Bitstream</value>
 		<value condition="String.StartsWith(Player.Process(audiodecoder),ff)">Decoded PCM</value>
 	</variable>
