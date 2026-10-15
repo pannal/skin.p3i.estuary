@@ -1,3 +1,32 @@
+[B]8.8.21[/B]
+• Show VAR instead of IMAX when DV active-area detection cannot establish consistent framing.
+• Keep border-detection startup progress visible during fullscreen playback and in the information view.
+
+[B]8.8.20[/B]
+• Show max target luminance for player-led DV in PPI
+• Use bullet (U+2022) instead of math dot as UI separator
+• Show active DV module and DV stream layout in PPI
+• Show lowest fps prefix and unit only when the value is present in PPI
+
+[B]8.8.19[/B]
+• New DTS extensions: DTS-ES, DTS 96/24 and DTS Express
+• Show Atmos, DTS:X, and Auro-3D spatial layouts in PPI
+• Auro-3D codec support, including a brand new codec logo
+• Show DTS-HD HRA with DTS:X
+• Omniphony binaural for headphones
+
+[B]8.8.18[/B]
+• Rename skin setting identifiers and some typo clean up (Codec Logos settings will reset to default)
+• Media flags: show Dolby Vision profile and second HDR type (Needs a rescan of the library)
+
+[B]8.8.17[/B]
+• Fix unclosed [ and remove orphaned )
+• Remove VS10 SDR gate that prevents DV → VS10 SDR and HDR → VS10 SDR from displaying their original DV/HDR information in PPI
+• Show "Auto (letterbox)" in PPI as a L5 state while auto-letterbox is active
+• Rework codec logos duration with a configurable, window-driven one-shot timer, replacing av.change
+• Publish skin.codeclogososd property once at Home load to skip AVChangeExtended DV OSD fallback
+• Add a slide-in entrance animation for codec logos and a setting to disable it
+
 [B]8.8.16[/B]
 • Fix overlapping DV and VS10 SDR/HDR10 codec logos
 • Enable the VS10 OSD button only when using the hardware decoder
@@ -80,5 +109,5 @@
 [B]0.6.1[/B]
 • Updated language files from Transifex
 
-﻿[B]0.0.1[/B]
+[B]0.0.1[/B]
 • Initial commit

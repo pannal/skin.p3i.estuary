@@ -73,22 +73,25 @@
 				<font>font13</font>
 			</control>
 		</control>
-		<control type="group" id="2">
+		<control type="group" id="888">
 			<depth>DepthOSD+</depth>
-			<visible>[String.IsEqual(Player.Process(av.change),1) + !String.IsEqual(VideoPlayer.VideoCodec,av1) + !Skin.HasSetting(osd.hidecodecstartuplogos)] | [Skin.HasSetting(osd.codeclogospreview) + !String.IsEqual(VideoPlayer.VideoCodec,av1)]</visible>
-			<visible>true</visible>
+			<visible>Skin.TimerIsRunning(codeclogos) + !String.IsEqual(VideoPlayer.VideoCodec,av1)</visible>
+			<animation type="Visible" condition="!Skin.HasSetting(codeclogo.noentryanimation)">
+				<effect type="slide" start="0,-80" end="0,0" delay="2000" time="320" tween="back"/>
+				<effect type="fade" start="0" end="100" delay="2000" time="180" tween="linear"/>
+			</animation>
 			<animation type="Hidden">
-				<effect type="fade" start="100" end="0" time="500" tween="sine"/>
+				<effect type="fade" start="100" end="0" time="50" tween="linear"/>
 			</animation>
 			<!-- Codec Logo position L/C/R. Right & center offsets differ by orientation: the vertical stack (144w) is narrower than the horizontal pair (308w). Margin 30, screen 1920. -->
-			<animation effect="slide" end="-776,0" time="0" condition="!Skin.HasSetting(osd.usecenterCodecLogos) + !Skin.HasSetting(osd.userightCodecLogos)">Conditional</animation>
-			<animation effect="slide" end="776,0" time="0" condition="Skin.HasSetting(osd.userightCodecLogos) + Skin.HasSetting(osd.codeclogoshorizontal)">Conditional</animation>
-			<animation effect="slide" end="940,0" time="0" condition="Skin.HasSetting(osd.userightCodecLogos) + !Skin.HasSetting(osd.codeclogoshorizontal)">Conditional</animation>
-			<animation effect="slide" end="82,0" time="0" condition="Skin.HasSetting(osd.usecenterCodecLogos) + !Skin.HasSetting(osd.codeclogoshorizontal)">Conditional</animation>
+			<animation effect="slide" end="-776,0" time="0" condition="!Skin.HasSetting(codeclogo.center) + !Skin.HasSetting(codeclogo.right)">Conditional</animation>
+			<animation effect="slide" end="776,0" time="0" condition="Skin.HasSetting(codeclogo.right) + Skin.HasSetting(codeclogo.horizontal)">Conditional</animation>
+			<animation effect="slide" end="940,0" time="0" condition="Skin.HasSetting(codeclogo.right) + !Skin.HasSetting(codeclogo.horizontal)">Conditional</animation>
+			<animation effect="slide" end="82,0" time="0" condition="Skin.HasSetting(codeclogo.center) + !Skin.HasSetting(codeclogo.horizontal)">Conditional</animation>
 			<!-- Active-area: slide down out of the DV letterbox bar by aspect class -->
-			<animation effect="slide" end="0,60" time="0" condition="!Skin.HasSetting(osd.codeclogosactiveareaoff) + String.IsEqual(Player.Process(video.dovi.active.area.class),1)">Conditional</animation>
-			<animation effect="slide" end="0,104" time="0" condition="!Skin.HasSetting(osd.codeclogosactiveareaoff) + String.IsEqual(Player.Process(video.dovi.active.area.class),2)">Conditional</animation>
-			<animation effect="slide" end="0,138" time="0" condition="!Skin.HasSetting(osd.codeclogosactiveareaoff) + String.IsEqual(Player.Process(video.dovi.active.area.class),3)">Conditional</animation>
+			<animation effect="slide" end="0,60" time="0" condition="!Skin.HasSetting(codeclogo.activeareaoff) + String.IsEqual(Player.Process(video.dovi.active.area.class),1)">Conditional</animation>
+			<animation effect="slide" end="0,104" time="0" condition="!Skin.HasSetting(codeclogo.activeareaoff) + String.IsEqual(Player.Process(video.dovi.active.area.class),2)">Conditional</animation>
+			<animation effect="slide" end="0,138" time="0" condition="!Skin.HasSetting(codeclogo.activeareaoff) + String.IsEqual(Player.Process(video.dovi.active.area.class),3)">Conditional</animation>
 			<!-- Video Codec Flags -->
 			<include content="VideoCodecFlag">
 				<param name="groupId">40</param><param name="imageId">41</param>
@@ -203,7 +206,7 @@
 			</include>
 			<include content="AudioCodecFlag">
 				<param name="groupId">80</param><param name="imageId">81</param>
-				<param name="visible">String.IsEqual(VideoPlayer.AudioCodec,dca)</param>
+				<param name="visible">String.IsEqual(VideoPlayer.AudioCodec,dca) | String.IsEqual(VideoPlayer.AudioCodec,dts_es) | String.IsEqual(VideoPlayer.AudioCodec,dts_96_24) | String.IsEqual(VideoPlayer.AudioCodec,dts_express)</param>
 				<param name="texture">dca.png</param>
 			</include>
 			<include content="AudioCodecFlag">
@@ -218,7 +221,7 @@
 			</include>
 			<include content="AudioCodecFlag">
 				<param name="groupId">86</param><param name="imageId">87</param>
-				<param name="visible">String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_x)</param>
+				<param name="visible">String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_x) | String.IsEqual(VideoPlayer.AudioCodec,dtshd_hra_x)</param>
 				<param name="texture">dtshd_ma_x.png</param>
 			</include>
 			<include content="AudioCodecFlag">
@@ -226,23 +229,31 @@
 				<param name="visible">String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_x_imax)</param>
 				<param name="texture">dtshd_ma_x_imax.png</param>
 			</include>
+			<include content="AudioCodecFlag">
+				<param name="groupId">90</param><param name="imageId">91</param>
+				<param name="visible">String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_auro3d)</param>
+				<param name="texture">dtshd_ma_auro3d.png</param>
+			</include>
 		</control>
-		<control type="group" id="21">
+		<control type="group" id="777">
 			<depth>DepthOSD+</depth>
-			<visible>[String.IsEqual(Player.Process(av.change),1) + String.IsEqual(VideoPlayer.VideoCodec,av1) + !Skin.HasSetting(osd.hidecodecstartuplogos)] | [Skin.HasSetting(osd.codeclogospreview) + String.IsEqual(VideoPlayer.VideoCodec,av1)]</visible>
-			<visible>true</visible>
+			<visible>Skin.TimerIsRunning(codeclogos) + String.IsEqual(VideoPlayer.VideoCodec,av1)</visible>
+			<animation type="Visible" condition="!Skin.HasSetting(codeclogo.noentryanimation)">
+				<effect type="slide" start="0,-80" end="0,0" delay="2000" time="320" tween="back"/>
+				<effect type="fade" start="0" end="100" delay="2000" time="180" tween="linear"/>
+			</animation>
 			<animation type="Hidden">
-				<effect type="fade" start="100" end="0" time="500" tween="sine"/>
+				<effect type="fade" start="100" end="0" time="50" tween="linear"/>
 			</animation>
 			<!-- Codec Logo position L/C/R. Right & center offsets differ by orientation: the vertical stack (144w) is narrower than the horizontal pair (308w). Margin 30, screen 1920. -->
-			<animation effect="slide" end="-776,0" time="0" condition="!Skin.HasSetting(osd.usecenterCodecLogos) + !Skin.HasSetting(osd.userightCodecLogos)">Conditional</animation>
-			<animation effect="slide" end="776,0" time="0" condition="Skin.HasSetting(osd.userightCodecLogos) + Skin.HasSetting(osd.codeclogoshorizontal)">Conditional</animation>
-			<animation effect="slide" end="940,0" time="0" condition="Skin.HasSetting(osd.userightCodecLogos) + !Skin.HasSetting(osd.codeclogoshorizontal)">Conditional</animation>
-			<animation effect="slide" end="82,0" time="0" condition="Skin.HasSetting(osd.usecenterCodecLogos) + !Skin.HasSetting(osd.codeclogoshorizontal)">Conditional</animation>
+			<animation effect="slide" end="-776,0" time="0" condition="!Skin.HasSetting(codeclogo.center) + !Skin.HasSetting(codeclogo.right)">Conditional</animation>
+			<animation effect="slide" end="776,0" time="0" condition="Skin.HasSetting(codeclogo.right) + Skin.HasSetting(codeclogo.horizontal)">Conditional</animation>
+			<animation effect="slide" end="940,0" time="0" condition="Skin.HasSetting(codeclogo.right) + !Skin.HasSetting(codeclogo.horizontal)">Conditional</animation>
+			<animation effect="slide" end="82,0" time="0" condition="Skin.HasSetting(codeclogo.center) + !Skin.HasSetting(codeclogo.horizontal)">Conditional</animation>
 			<!-- Active-area: slide down out of the DV letterbox bar by aspect class -->
-			<animation effect="slide" end="0,60" time="0" condition="!Skin.HasSetting(osd.codeclogosactiveareaoff) + String.IsEqual(Player.Process(video.dovi.active.area.class),1)">Conditional</animation>
-			<animation effect="slide" end="0,104" time="0" condition="!Skin.HasSetting(osd.codeclogosactiveareaoff) + String.IsEqual(Player.Process(video.dovi.active.area.class),2)">Conditional</animation>
-			<animation effect="slide" end="0,138" time="0" condition="!Skin.HasSetting(osd.codeclogosactiveareaoff) + String.IsEqual(Player.Process(video.dovi.active.area.class),3)">Conditional</animation>
+			<animation effect="slide" end="0,60" time="0" condition="!Skin.HasSetting(codeclogo.activeareaoff) + String.IsEqual(Player.Process(video.dovi.active.area.class),1)">Conditional</animation>
+			<animation effect="slide" end="0,104" time="0" condition="!Skin.HasSetting(codeclogo.activeareaoff) + String.IsEqual(Player.Process(video.dovi.active.area.class),2)">Conditional</animation>
+			<animation effect="slide" end="0,138" time="0" condition="!Skin.HasSetting(codeclogo.activeareaoff) + String.IsEqual(Player.Process(video.dovi.active.area.class),3)">Conditional</animation>
 			<!-- Video Codec Flags -->
 			<include content="VideoCodecFlag">
 				<param name="groupId">40</param><param name="imageId">41</param>
@@ -366,7 +377,7 @@
 			</include>
 			<include content="AudioCodecFlag">
 				<param name="groupId">80</param><param name="imageId">81</param>
-				<param name="visible">String.IsEqual(VideoPlayer.AudioCodec,dca)</param>
+				<param name="visible">String.IsEqual(VideoPlayer.AudioCodec,dca) | String.IsEqual(VideoPlayer.AudioCodec,dts_es) | String.IsEqual(VideoPlayer.AudioCodec,dts_96_24) | String.IsEqual(VideoPlayer.AudioCodec,dts_express)</param>
 				<param name="texture">dca.png</param>
 			</include>
 			<include content="AudioCodecFlag">
@@ -381,13 +392,18 @@
 			</include>
 			<include content="AudioCodecFlag">
 				<param name="groupId">86</param><param name="imageId">87</param>
-				<param name="visible">String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_x)</param>
+				<param name="visible">String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_x) | String.IsEqual(VideoPlayer.AudioCodec,dtshd_hra_x)</param>
 				<param name="texture">dtshd_ma_x.png</param>
 			</include>
 			<include content="AudioCodecFlag">
 				<param name="groupId">88</param><param name="imageId">89</param>
 				<param name="visible">String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_x_imax)</param>
 				<param name="texture">dtshd_ma_x_imax.png</param>
+			</include>
+			<include content="AudioCodecFlag">
+				<param name="groupId">90</param><param name="imageId">91</param>
+				<param name="visible">String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_auro3d)</param>
+				<param name="texture">dtshd_ma_auro3d.png</param>
 			</include>
 		</control>
 	</controls>

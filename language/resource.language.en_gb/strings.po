@@ -957,7 +957,7 @@ msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31668"
-msgid "Position"
+msgid "Codec logos position"
 msgstr ""
 
 #: /xml/SkinSettings.xml
@@ -995,7 +995,22 @@ msgctxt "#31675"
 msgid "Dynamic video OSD icon labels"
 msgstr ""
 
-#: /xml/Variables.xml
+#: /xml/SkinSettings.xml
 msgctxt "#31676"
-msgid "Variable or uncertain framing"
+msgid "Codec logos duration (seconds)"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#31677"
+msgid "Default (7)"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31678"
+msgid "Codec logos slide-in animation"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#31679"
+msgid "Skipped [COLOR dimgrey](VAR)[/COLOR]"
 msgstr ""
