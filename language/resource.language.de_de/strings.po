@@ -833,3 +833,8 @@ msgstr "Fortschrittsanzeige beim Suchen ausblenden"
 msgctxt "#31675"
 msgid "Dynamic video OSD icon labels"
 msgstr "Dynamische Video-OSD-Symbolbeschriftungen"
+
+#: /xml/Variables.xml
+msgctxt "#31676"
+msgid "Variable or uncertain framing"
+msgstr "Variable oder unsichere Bildgrenzen"

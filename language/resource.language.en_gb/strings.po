@@ -994,3 +994,8 @@ msgstr ""
 msgctxt "#31675"
 msgid "Dynamic video OSD icon labels"
 msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#31676"
+msgid "Variable or uncertain framing"
+msgstr ""
