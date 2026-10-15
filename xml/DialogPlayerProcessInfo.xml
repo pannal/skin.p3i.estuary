@@ -269,7 +269,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<!-- DV RPU / BL / EL -->
+					<!-- DV RPU -->
 					<width>500</width>
 					<height>40</height>
 					<control type="label">
@@ -277,28 +277,75 @@
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
-						<label>[COLOR button_focus]RPU/BL/EL:[/COLOR]</label>
+						<label>[COLOR button_focus]RPU:[/COLOR]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
 					</control>
 					<control type="label">
 						<left>200</left>
-						<top>-1</top>
 						<width>300</width>
 						<height>40</height>
 						<aligny>center</aligny>
 						<align>left</align>
-						<label>$VAR[RPUPresentVar]  $VAR[BLPresentVar]  $VAR[ELPresentVar]  $VAR[ELSourcePresentVar]</label>
+						<label>$VAR[RPUPresentVar]</label>
+						<font>font40</font>
+						<shadowcolor>black</shadowcolor>
+					</control>
+				</control>
+				<control type="group">
+					<!-- DV BL -->
+					<width>500</width>
+					<height>40</height>
+					<control type="label">
+						<width>200</width>
+						<height>40</height>
+						<aligny>bottom</aligny>
+						<align>left</align>
+						<label>[COLOR button_focus]BL:[/COLOR]</label>
+						<font>font12</font>
+						<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+						<left>200</left>
+						<width>300</width>
+						<height>40</height>
+						<aligny>center</aligny>
+						<align>left</align>
+						<label>$VAR[BLPresentVar]</label>
+						<font>font40</font>
+						<shadowcolor>black</shadowcolor>
+					</control>
+				</control>
+				<control type="group">
+					<!-- DV EL -->
+					<width>500</width>
+					<height>40</height>
+					<control type="label">
+						<width>200</width>
+						<height>40</height>
+						<aligny>bottom</aligny>
+						<align>left</align>
+						<label>[COLOR button_focus]EL:[/COLOR]</label>
+						<font>font12</font>
+						<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+						<left>200</left>
+						<width>300</width>
+						<height>40</height>
+						<aligny>center</aligny>
+						<align>left</align>
+						<label>$VAR[ELPresentVar]$VAR[ELSourcePresentVar,  ]</label>
 						<font>font40</font>
 						<shadowcolor>black</shadowcolor>
 					</control>
 					<control type="label">
-						<left>265</left>
+						<left>200</left>
 						<width>300</width>
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
-						<label>$VAR[DVELVar]  $VAR[DVSourceELVar]</label>
+						<label>$VAR[DVELVar]$VAR[DVSourceELVar,  ]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
 					</control>
@@ -347,30 +394,6 @@
 						<aligny>bottom</aligny>
 						<align>left</align>
 						<label>$VAR[CMMetadataVar]</label>
-						<font>font12</font>
-						<shadowcolor>black</shadowcolor>
-					</control>
-				</control>
-				<control type="group">
-					<!-- L5 Detection -->
-					<width>500</width>
-					<height>40</height>
-					<control type="label">
-						<width>200</width>
-						<height>40</height>
-						<aligny>bottom</aligny>
-						<align>left</align>
-						<label>[COLOR button_focus]L5 Detection:[/COLOR]</label>
-						<font>font12</font>
-						<shadowcolor>black</shadowcolor>
-					</control>
-					<control type="label">
-						<left>200</left>
-						<width>300</width>
-						<height>40</height>
-						<aligny>bottom</aligny>
-						<align>left</align>
-						<label>$VAR[L5StateVar]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
 					</control>
@@ -711,6 +734,30 @@
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="group">
+					<!-- L5 Detection -->
+					<width>500</width>
+					<height>40</height>
+					<control type="label">
+						<width>250</width>
+						<height>40</height>
+						<aligny>bottom</aligny>
+						<align>left</align>
+						<label>[COLOR button_focus]L5 Detection:[/COLOR]</label>
+						<font>font12</font>
+						<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+						<left>272</left>
+						<width>300</width>
+						<height>40</height>
+						<aligny>bottom</aligny>
+						<align>left</align>
+						<label>$VAR[L5StateVar]</label>
+						<font>font12</font>
+						<shadowcolor>black</shadowcolor>
+					</control>
+				</control>
+				<control type="group">
 					<!-- DV L5 Left:Right Top:Bottom -->
 					<visible>String.IsEqual(Player.Process(video.dovi.has.l5),1)</visible>
 					<width>500</width>
@@ -932,7 +979,7 @@
 						<height>40</height>
 						<aligny>bottom</aligny>
 						<align>left</align>
-						<label>[COLOR button_focus]Mastering Display Color:[/COLOR]</label>
+						<label>[COLOR button_focus]Mastering Display:[/COLOR]</label>
 						<font>font12</font>
 						<shadowcolor>black</shadowcolor>
 					</control>
