@@ -1,3 +1,8 @@
+[B]8.8.23[/B]
+• Increase PPI height, add borders detection, and rearrange "Player" tab labels
+• Rearrange PPI's "Dolby Vision - HDR" tab labels
+• Show Omniphony config.yaml override in PPI
+
 [B]8.8.22[/B]
 • Keep the Skipped (VAR) detection status untranslated.
 
