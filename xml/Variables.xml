@@ -1171,4 +1171,8 @@
 		<value condition="String.IsEqual(Player.Process(video.borders.detected),1)">$INFO[Player.Process(video.borders.left.offset)] [COLOR dimgrey]L[/COLOR] $VAR[|] $INFO[Player.Process(video.borders.right.offset)] [COLOR dimgrey]R[/COLOR] $VAR[|] $INFO[Player.Process(video.borders.top.offset)] [COLOR dimgrey]T[/COLOR] $VAR[|] $INFO[Player.Process(video.borders.bottom.offset)] [COLOR dimgrey]B[/COLOR]</value>
 		<value>Unavailable</value>
 	</variable>
+	<variable name="BorderProgressPositionVar">
+		<value condition="Skin.HasSetting(borderprogress.left)">$LOCALIZE[31681]</value>
+		<value>$LOCALIZE[31680]</value>
+	</variable>
 </includes>

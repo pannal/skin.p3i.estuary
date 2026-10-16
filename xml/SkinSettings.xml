@@ -389,6 +389,12 @@
 					<selected>Skin.HasSetting(OSDHideSeek)</selected>
 					<onclick>Skin.ToggleSetting(OSDHideSeek)</onclick>
 				</control>
+				<control type="button" id="639">
+					<label>$LOCALIZE[31679]</label>
+					<label2>$VAR[BorderProgressPositionVar]</label2>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.SelectBool(31679, 31680|borderprogress.right, 31681|borderprogress.left)</onclick>
+				</control>
 			</control>
 			<control type="image">
 				<description>Dialog Header image</description>

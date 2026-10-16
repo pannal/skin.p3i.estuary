@@ -1275,7 +1275,7 @@
 						<shadowcolor>black</shadowcolor>
 					</control>
 				</control>
-                <control type="group">
+				<control type="group">
 					<!-- Memory -->
 					<width>600</width>
 					<height>46</height>

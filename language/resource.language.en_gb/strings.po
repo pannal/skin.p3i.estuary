@@ -1009,3 +1009,18 @@ msgstr ""
 msgctxt "#31678"
 msgid "Codec logos slide-in animation"
 msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31679"
+msgid "Border detection progress position"
+msgstr ""
+
+#: /xml/SkinSettings.xml /xml/Variables.xml
+msgctxt "#31680"
+msgid "Top right"
+msgstr ""
+
+#: /xml/SkinSettings.xml /xml/Variables.xml
+msgctxt "#31681"
+msgid "Top left"
+msgstr ""
