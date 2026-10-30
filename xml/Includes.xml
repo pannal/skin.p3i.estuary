@@ -1193,7 +1193,7 @@
 					<control type="image" id="32111">
 						<include>FullScreenDimensions</include>
 						<aspectratio>scale</aspectratio>
-						<fadetime>400</fadetime>
+						<fadetime>300</fadetime>
 						<animation effect="fade" time="400">VisibleChange</animation>
 						<texture background="true" colordiffuse="37FFFFFF">$VAR[MediaFanartVar]</texture>
 						<visible>!Control.IsVisible(502) | $EXP[infodialog_active]</visible>
