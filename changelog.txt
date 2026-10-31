@@ -1,3 +1,8 @@
+[B]8.8.24[/B]
+• Raise preloaditems from 1 to 2 on Poster view and Shift view
+• Shorten background fanart crossfades to 300 ms
+• Upscale codec logos to 288x160 for native 4K GUI
+
 [B]8.8.23[/B]
 • Increase PPI height, add borders detection, and rearrange "Player" tab labels
 • Rearrange PPI's "Dolby Vision - HDR" tab labels
