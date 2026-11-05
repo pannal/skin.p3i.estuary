@@ -1171,4 +1171,9 @@
 		<value condition="String.IsEqual(Player.Process(video.borders.detected),1)">$INFO[Player.Process(video.borders.left.offset)] [COLOR dimgrey]L[/COLOR] $VAR[|] $INFO[Player.Process(video.borders.right.offset)] [COLOR dimgrey]R[/COLOR] $VAR[|] $INFO[Player.Process(video.borders.top.offset)] [COLOR dimgrey]T[/COLOR] $VAR[|] $INFO[Player.Process(video.borders.bottom.offset)] [COLOR dimgrey]B[/COLOR]</value>
 		<value>Unavailable</value>
 	</variable>
+	<variable name="TopBarCPUInfoVar">
+		<value condition="Skin.HasSetting(show_cpu) + Skin.HasSetting(show_weatherinfo)">[COLOR grey]CPU : $INFO[System.CPUTemperature]  l  RAM : $INFO[system.memory(used.percent)]  l[/COLOR]</value>
+		<value condition="Skin.HasSetting(show_cpu)">[COLOR grey]CPU : $INFO[System.CPUTemperature]  l  RAM : $INFO[system.memory(used.percent)][/COLOR]</value>
+		<value></value>
+	</variable>
 </includes>
