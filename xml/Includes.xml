@@ -1162,7 +1162,7 @@
 			<aspectratio>scale</aspectratio>
 			<texture colordiffuse="secondary_background" fallback="special://skin/extras/backgrounds/pattern1.jpg">$INFO[Skin.String(background_overlay),special://skin/extras/backgrounds/pattern,.jpg]</texture>
 			<animation effect="fade" time="300">VisibleChange</animation>
-			<visible>!Control.IsVisible(31111) | !Control.IsVisible(32111) | String.IsEmpty(Control.GetLabel(32111))</visible>
+			<visible>!Control.IsVisible(31111) | [!Control.IsVisible(32111) + !Control.IsVisible(502)] | [Control.IsVisible(32111) + String.IsEmpty(Control.GetLabel(32111))]</visible>
 		</control>
 	</include>
 	<include name="DefaultBackground">
@@ -1206,7 +1206,7 @@
 						<right>1193</right>
 						<height>100%</height>
 						<aspectratio aligny="center">scale</aspectratio>
-						<fadetime>400</fadetime>
+						<fadetime>300</fadetime>
 						<include>OpenClose_Left</include>
 						<animation effect="fade" time="400">VisibleChange</animation>
 						<texture background="true" colordiffuse="37FFFFFF">$VAR[PosterVar]</texture>

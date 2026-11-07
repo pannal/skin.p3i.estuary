@@ -31,8 +31,15 @@
 					<right>36</right>
 					<top>115</top>
 					<height>644</height>
+					<texture>colors/black.png</texture>
+				</control>
+				<control type="image">
+					<left>38</left>
+					<right>36</right>
+					<top>115</top>
+					<height>644</height>
 					<fadetime>300</fadetime>
-					<texture border="2" fallback="special://skin/extras/home-images/movie.jpg" background="true">$VAR[FanartImageVar]</texture>
+					<texture fallback="special://skin/extras/home-images/movie.jpg" background="true">$VAR[FanartImageVar]</texture>
 					<aspectratio align="center" aligny="bottom">scale</aspectratio>
 				</control>
 				<control type="group">
@@ -56,6 +63,7 @@
 					<onleft>502</onleft>
 					<onright>502</onright>
 					<orientation>vertical</orientation>
+					<texturesliderbackground />
 					<animation effect="zoom" end="50,100" time="300" tween="sine" center="20,0" easing="inout" condition="!Control.HasFocus(502600)">conditional</animation>
 				</control>
 				<control type="group">
