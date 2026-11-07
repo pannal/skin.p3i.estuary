@@ -1162,7 +1162,7 @@
 			<aspectratio>scale</aspectratio>
 			<texture colordiffuse="secondary_background" fallback="special://skin/extras/backgrounds/pattern1.jpg">$INFO[Skin.String(background_overlay),special://skin/extras/backgrounds/pattern,.jpg]</texture>
 			<animation effect="fade" time="300">VisibleChange</animation>
-			<visible>!Control.IsVisible(31111) | [!Control.IsVisible(32111) + !Control.IsVisible(502)] | [Control.IsVisible(32111) + String.IsEmpty(Control.GetLabel(32111))]</visible>
+			<visible>[!Control.IsVisible(31111) + [!Control.IsVisible(32113) | String.IsEmpty(Control.GetLabel(32113))]] | [Control.IsVisible(31111) + !Control.IsVisible(32111) + !Control.IsVisible(502)] | [Control.IsVisible(31111) + Control.IsVisible(32111) + String.IsEmpty(Control.GetLabel(32111))]</visible>
 		</control>
 	</include>
 	<include name="DefaultBackground">
