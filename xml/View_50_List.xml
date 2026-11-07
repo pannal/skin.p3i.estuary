@@ -33,6 +33,7 @@
 						<onleft>50</onleft>
 						<onright>50</onright>
 						<orientation>vertical</orientation>
+						<texturesliderbackground />
 						<animation effect="zoom" end="50,100" time="300" tween="sine" center="20,0" easing="inout" condition="!Control.HasFocus(50600)">conditional</animation>
 					</control>
 				</control>
@@ -44,14 +45,16 @@
 			<depth>DepthContentPanel</depth>
 			<control type="group">
 				<right>-32</right>
-				<include content="ContentPanel">
-					<param name="left" value="0" />
-					<param name="top" value="-20" />
-					<param name="width" value="656" />
-					<param name="flipx" value="true" />
-				</include>
 				<control type="group">
 					<visible>!Container.Content(songs)</visible>
+					<control type="image">
+						<depth>DepthContentPopout</depth>
+						<left>48</left>
+						<top>160</top>
+						<width>540</width>
+						<height>810</height>
+						<texture>colors/black.png</texture>
+					</control>
 					<control type="image">
 						<depth>DepthContentPopout</depth>
 						<left>48</left>
@@ -59,7 +62,7 @@
 						<width>540</width>
 						<height>850</height>
 						<bottom>124</bottom>
-						<fadetime>200</fadetime>
+						<fadetime>300</fadetime>
 						<aspectratio aligny="bottom">keep</aspectratio>
 						<texture fallback="DefaultVideo.png" background="true">$VAR[InfoWallThumbVar]</texture>
 					</control>
@@ -166,7 +169,6 @@
 						<aligny>center</aligny>
 						<font>font12</font>
 						<label>$VAR[ListLabel2Var]</label>
-						<animation effect="fade" start="70" end="100" time="300" reversible="false">Focus</animation>
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
 					<control type="image">
@@ -175,17 +177,6 @@
 						<width>32</width>
 						<height>32</height>
 						<texture>$VAR[ListWatchedIconVar]</texture>
-						<animation effect="fade" start="30" end="100" time="300" reversible="false">Focus</animation>
-					</control>
-					<control type="image">
-						<left>21</left>
-						<centertop>50%</centertop>
-						<width>32</width>
-						<height>32</height>
-						<texture colordiffuse="button_focus">$VAR[ListWatchedIconVar]</texture>
-						<animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
-						<animation effect="fade" time="150">VisibleChange</animation>
-						<visible>!Control.HasFocus($PARAM[list_id])</visible>
 					</control>
 				</focusedlayout>
 				<itemlayout height="list_item_height">
