@@ -1,3 +1,10 @@
+[B]8.8.25[/B]
+• Avoid polling temperatures when the CPU display is hidden
+• Hide the background pattern while fanart covers it
+• Optimize List, Fanart, Banner, Poster, and Home views
+• Skip the transparent centre of the remaining focus frames
+• Merge the top bar CPU and RAM labels
+
 [B]8.8.24[/B]
 • Raise preloaditems from 1 to 2 on Poster view and Shift view
 • Shorten background fanart crossfades to 300 ms
