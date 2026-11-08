@@ -1028,30 +1028,16 @@
 						<height>50</height>
 						<width>auto</width>
 						<aligny>center</aligny>
-						<label>[COLOR grey]RAM : $INFO[system.memory(used.percent)][/COLOR]</label>
-						<visible>Skin.HasSetting(show_ram) + !Skin.HasSetting(show_weatherinfo)</visible>
-					</control>
-					<control type="label">
-						<height>50</height>
-						<width>auto</width>
-						<aligny>center</aligny>
-						<label>[COLOR grey]RAM : $INFO[system.memory(used.percent)]  l[/COLOR]</label>
-						<visible>Skin.HasSetting(show_ram) + Skin.HasSetting(show_weatherinfo)</visible>
+						<label>$VAR[TopBarRAMInfoVar]</label>
+						<visible>Skin.HasSetting(show_ram)</visible>
 					</control>
 					<control type="label">
 						<height>50</height>
 						<width>auto</width>
 						<aligny>center</aligny>
 						<label>$VAR[TopBarCPUInfoVar]</label>
-						<visible>Skin.HasSetting(show_cpu) + !Skin.HasSetting(show_weatherinfo)</visible>
-                    </control>
-					<control type="label">
-						<height>50</height>
-						<width>auto</width>
-						<aligny>center</aligny>
-						<label>$VAR[TopBarCPUInfoVar]</label>
-						<visible>Skin.HasSetting(show_cpu) + Skin.HasSetting(show_weatherinfo)</visible>
-                    </control>
+						<visible>Skin.HasSetting(show_cpu)</visible>
+					</control>
 					<control type="label">
 						<height>50</height>
 						<width>auto</width>
